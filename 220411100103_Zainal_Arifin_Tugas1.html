@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; PPW</title>
+    <title>PPW Crawling Berita &#8212; PPW</title>
   
   
   
@@ -178,7 +178,10 @@
                 </a>
             </li>
         </ul>
-        
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">PPW Crawling Berita</a></li>
+</ul>
+
     </div>
 </nav></div>
     </div>
@@ -349,9 +352,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -362,19 +363,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>PPW Crawling Berita</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -384,7 +377,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="ppw-crawling-berita">
+<h1>PPW Crawling Berita<a class="headerlink" href="#ppw-crawling-berita" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
@@ -480,6 +475,65 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StaleElementReferenceException</span><span class="g g-Whitespace">            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">contoh</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">url</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="k">if</span> <span class="n">url</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webelement.py:178,</span> in <span class="ni">WebElement.get_attribute</span><span class="nt">(self, name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">176</span> <span class="k">if</span> <span class="n">getAttribute_js</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">177</span>     <span class="n">_load_js</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">178</span> <span class="n">attribute_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">179</span>     <span class="sa">f</span><span class="s2">&quot;/* getAttribute */return (</span><span class="si">{</span><span class="n">getAttribute_js</span><span class="si">}</span><span class="s2">).apply(null, arguments);&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">name</span>
+<span class="g g-Whitespace">    </span><span class="mi">180</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span> <span class="k">return</span> <span class="n">attribute_value</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:414,</span> in <span class="ni">WebDriver.execute_script</span><span class="nt">(self, script, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">411</span> <span class="n">converted_args</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">412</span> <span class="n">command</span> <span class="o">=</span> <span class="n">Command</span><span class="o">.</span><span class="n">W3C_EXECUTE_SCRIPT</span>
+<span class="ne">--&gt; </span><span class="mi">414</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;script&quot;</span><span class="p">:</span> <span class="n">script</span><span class="p">,</span> <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="n">converted_args</span><span class="p">})[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:354,</span> in <span class="ni">WebDriver.execute</span><span class="nt">(self, driver_command, params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">352</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">command_executor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">driver_command</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">353</span> <span class="k">if</span> <span class="n">response</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">354</span>     <span class="bp">self</span><span class="o">.</span><span class="n">error_handler</span><span class="o">.</span><span class="n">check_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span>     <span class="n">response</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_unwrap_value</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span>     <span class="k">return</span> <span class="n">response</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:229,</span> in <span class="ni">ErrorHandler.check_response</span><span class="nt">(self, response)</span>
+<span class="g g-Whitespace">    </span><span class="mi">227</span>         <span class="n">alert_text</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="s2">&quot;alert&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span>     <span class="k">raise</span> <span class="n">exception_class</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">screen</span><span class="p">,</span> <span class="n">stacktrace</span><span class="p">,</span> <span class="n">alert_text</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]  # mypy is not smart enough here</span>
+<span class="ne">--&gt; </span><span class="mi">229</span> <span class="k">raise</span> <span class="n">exception_class</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">screen</span><span class="p">,</span> <span class="n">stacktrace</span><span class="p">)</span>
+
+<span class="ne">StaleElementReferenceException</span>: Message: stale element reference: stale element not found
+  <span class="p">(</span><span class="n">Session</span> <span class="n">info</span><span class="p">:</span> <span class="n">chrome</span><span class="o">=</span><span class="mf">128.0.6613.115</span><span class="p">);</span> <span class="n">For</span> <span class="n">documentation</span> <span class="n">on</span> <span class="n">this</span> <span class="n">error</span><span class="p">,</span> <span class="n">please</span> <span class="n">visit</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">selenium</span><span class="o">.</span><span class="n">dev</span><span class="o">/</span><span class="n">documentation</span><span class="o">/</span><span class="n">webdriver</span><span class="o">/</span><span class="n">troubleshooting</span><span class="o">/</span><span class="n">errors</span><span class="c1">#stale-element-reference-exception</span>
+<span class="ne">Stacktrace</span>:
+	<span class="n">GetHandleVerifier</span> <span class="p">[</span><span class="mh">0x00007FF6520FB5D2</span><span class="o">+</span><span class="mi">29090</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF65206E689</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651F2B1CA</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651F3DBD9</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651F32944</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651F32AC9</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651F30777</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651F34398</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651FC775C</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651FA66EA</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651FC65D9</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651FA6493</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651F709B1</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF651F71B11</span><span class="p">]</span>
+	<span class="n">GetHandleVerifier</span> <span class="p">[</span><span class="mh">0x00007FF652418C5D</span><span class="o">+</span><span class="mi">3295277</span><span class="p">]</span>
+	<span class="n">GetHandleVerifier</span> <span class="p">[</span><span class="mh">0x00007FF652464843</span><span class="o">+</span><span class="mi">3605523</span><span class="p">]</span>
+	<span class="n">GetHandleVerifier</span> <span class="p">[</span><span class="mh">0x00007FF65245A707</span><span class="o">+</span><span class="mi">3564247</span><span class="p">]</span>
+	<span class="n">GetHandleVerifier</span> <span class="p">[</span><span class="mh">0x00007FF6521B6EB6</span><span class="o">+</span><span class="mi">797318</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF65207980F</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF6520753F4</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF652075580</span><span class="p">]</span>
+	<span class="p">(</span><span class="n">No</span> <span class="n">symbol</span><span class="p">)</span> <span class="p">[</span><span class="mh">0x00007FF652064A1F</span><span class="p">]</span>
+	<span class="n">BaseThreadInitThunk</span> <span class="p">[</span><span class="mh">0x00007FFAD48C257D</span><span class="o">+</span><span class="mi">29</span><span class="p">]</span>
+	<span class="n">RtlUserThreadStart</span> <span class="p">[</span><span class="mh">0x00007FFAD66EAF28</span><span class="o">+</span><span class="mi">40</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -865,6 +919,7 @@ document.write(`
   </div>
 </div></div>
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -911,21 +966,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
