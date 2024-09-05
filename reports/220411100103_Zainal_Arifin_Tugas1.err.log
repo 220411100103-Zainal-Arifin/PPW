@@ -1,0 +1,116 @@
+Traceback (most recent call last):
+  File "C:\Users\zarif\AppData\Local\Programs\Python\Python312\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\zarif\AppData\Local\Programs\Python\Python312\Lib\site-packages\nbclient\client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zarif\AppData\Roaming\Python\Python312\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zarif\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\zarif\AppData\Local\Programs\Python\Python312\Lib\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\zarif\AppData\Local\Programs\Python\Python312\Lib\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\zarif\AppData\Local\Programs\Python\Python312\Lib\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+for i in contoh:
+    url = i.get_attribute('href')
+    if url:
+        driver.get(url)
+        time.sleep(2)
+
+        try:
+            judul = driver.find_element(By.XPATH, './/*[@id="main"]/section[1]/div/article/header/div[1]/h1').text
+            kategori = driver.find_element(By.XPATH, './/*[@id="main"]/section[1]/div/article/div[2]/div[1]/div[3]/div[4]/div[1]').text
+            tanggal = driver.find_element(By.XPATH, './/*[@id="main"]/section[1]/div/article/header/div[2]/div[1]/div[1]/div').text
+
+            isi = driver.find_element(By.XPATH, '//*[@id="main"]/section[1]/div/article/div[2]/div[1]')
+            isibos = []
+            isii = isi.find_elements(By.TAG_NAME, "p")
+            for p in isii:
+                isibos.append(p.text)
+
+            # Store the data in a dictionary
+            data = {
+                "Judul": judul,
+                "Kategori": kategori,
+                "Tanggal": tanggal,
+                "Isi": " ".join(isibos)  # Combine all paragraphs into one string
+            }
+            data_list.append(data)
+
+        except Exception as e:
+            print(f"Data not found on {url}. Error: {e}")
+
+        driver.back()
+        time.sleep(2)
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mStaleElementReferenceException[0m            Traceback (most recent call last)
+Cell [1;32mIn[8], line 2[0m
+[0;32m      1[0m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m contoh:
+[1;32m----> 2[0m     url [38;5;241m=[39m [43mi[49m[38;5;241;43m.[39;49m[43mget_attribute[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mhref[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[0;32m      3[0m     [38;5;28;01mif[39;00m url:
+[0;32m      4[0m         driver[38;5;241m.[39mget(url)
+
+File [1;32m~\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webelement.py:178[0m, in [0;36mWebElement.get_attribute[1;34m(self, name)[0m
+[0;32m    176[0m [38;5;28;01mif[39;00m getAttribute_js [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[0;32m    177[0m     _load_js()
+[1;32m--> 178[0m attribute_value [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mparent[49m[38;5;241;43m.[39;49m[43mexecute_script[49m[43m([49m
+[0;32m    179[0m [43m    [49m[38;5;124;43mf[39;49m[38;5;124;43m"[39;49m[38;5;124;43m/* getAttribute */return ([39;49m[38;5;132;43;01m{[39;49;00m[43mgetAttribute_js[49m[38;5;132;43;01m}[39;49;00m[38;5;124;43m).apply(null, arguments);[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[43mname[49m
+[0;32m    180[0m [43m[49m[43m)[49m
+[0;32m    181[0m [38;5;28;01mreturn[39;00m attribute_value
+
+File [1;32m~\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:414[0m, in [0;36mWebDriver.execute_script[1;34m(self, script, *args)[0m
+[0;32m    411[0m converted_args [38;5;241m=[39m [38;5;28mlist[39m(args)
+[0;32m    412[0m command [38;5;241m=[39m Command[38;5;241m.[39mW3C_EXECUTE_SCRIPT
+[1;32m--> 414[0m [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mexecute[49m[43m([49m[43mcommand[49m[43m,[49m[43m [49m[43m{[49m[38;5;124;43m"[39;49m[38;5;124;43mscript[39;49m[38;5;124;43m"[39;49m[43m:[49m[43m [49m[43mscript[49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43margs[39;49m[38;5;124;43m"[39;49m[43m:[49m[43m [49m[43mconverted_args[49m[43m}[49m[43m)[49m[[38;5;124m"[39m[38;5;124mvalue[39m[38;5;124m"[39m]
+
+File [1;32m~\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:354[0m, in [0;36mWebDriver.execute[1;34m(self, driver_command, params)[0m
+[0;32m    352[0m response [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mcommand_executor[38;5;241m.[39mexecute(driver_command, params)
+[0;32m    353[0m [38;5;28;01mif[39;00m response:
+[1;32m--> 354[0m     [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43merror_handler[49m[38;5;241;43m.[39;49m[43mcheck_response[49m[43m([49m[43mresponse[49m[43m)[49m
+[0;32m    355[0m     response[[38;5;124m"[39m[38;5;124mvalue[39m[38;5;124m"[39m] [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_unwrap_value(response[38;5;241m.[39mget([38;5;124m"[39m[38;5;124mvalue[39m[38;5;124m"[39m, [38;5;28;01mNone[39;00m))
+[0;32m    356[0m     [38;5;28;01mreturn[39;00m response
+
+File [1;32m~\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:229[0m, in [0;36mErrorHandler.check_response[1;34m(self, response)[0m
+[0;32m    227[0m         alert_text [38;5;241m=[39m value[[38;5;124m"[39m[38;5;124malert[39m[38;5;124m"[39m][38;5;241m.[39mget([38;5;124m"[39m[38;5;124mtext[39m[38;5;124m"[39m)
+[0;32m    228[0m     [38;5;28;01mraise[39;00m exception_class(message, screen, stacktrace, alert_text)  [38;5;66;03m# type: ignore[call-arg]  # mypy is not smart enough here[39;00m
+[1;32m--> 229[0m [38;5;28;01mraise[39;00m exception_class(message, screen, stacktrace)
+
+[1;31mStaleElementReferenceException[0m: Message: stale element reference: stale element not found
+  (Session info: chrome=128.0.6613.115); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6520FB5D2+29090]
+	(No symbol) [0x00007FF65206E689]
+	(No symbol) [0x00007FF651F2B1CA]
+	(No symbol) [0x00007FF651F3DBD9]
+	(No symbol) [0x00007FF651F32944]
+	(No symbol) [0x00007FF651F32AC9]
+	(No symbol) [0x00007FF651F30777]
+	(No symbol) [0x00007FF651F34398]
+	(No symbol) [0x00007FF651FC775C]
+	(No symbol) [0x00007FF651FA66EA]
+	(No symbol) [0x00007FF651FC65D9]
+	(No symbol) [0x00007FF651FA6493]
+	(No symbol) [0x00007FF651F709B1]
+	(No symbol) [0x00007FF651F71B11]
+	GetHandleVerifier [0x00007FF652418C5D+3295277]
+	GetHandleVerifier [0x00007FF652464843+3605523]
+	GetHandleVerifier [0x00007FF65245A707+3564247]
+	GetHandleVerifier [0x00007FF6521B6EB6+797318]
+	(No symbol) [0x00007FF65207980F]
+	(No symbol) [0x00007FF6520753F4]
+	(No symbol) [0x00007FF652075580]
+	(No symbol) [0x00007FF652064A1F]
+	BaseThreadInitThunk [0x00007FFAD48C257D+29]
+	RtlUserThreadStart [0x00007FFAD66EAF28+40]
+
+
