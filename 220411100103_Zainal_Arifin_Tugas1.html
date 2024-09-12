@@ -1,108 +1,45 @@
+
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="./">
+
+<html lang="en" data-content_root="./" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>PPW Crawling Berita &#8212; PPW</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <script data-cfasync="false">
-      document.documentElement.dataset.mode =
-        localStorage.getItem("mode") || "";
-      document.documentElement.dataset.theme =
-        localStorage.getItem("theme") || "";
-    </script>
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <!-- Loaded before other Sphinx assets -->
-    <link
-      href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b"
-      rel="stylesheet"
-    />
-    <link
-      href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b"
-      rel="stylesheet"
-    />
-    <link
-      href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b"
-      rel="stylesheet"
-    />
-
-    <link
-      href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b"
-      rel="stylesheet"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      crossorigin
-      href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      crossorigin
-      href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      crossorigin
-      href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2"
-    />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="_static/pygments.css?v=fa44fd50"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="_static/styles/sphinx-book-theme.css?v=a3416100"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="_static/togglebutton.css?v=13237357"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="_static/copybutton.css?v=76b2166b"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="_static/sphinx-thebe.css?v=4fa983c6"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="_static/sphinx-design.min.css?v=95c83b7e"
-    />
-
-    <!-- Pre-loaded scripts that we'll load fully later -->
-    <link
-      rel="preload"
-      as="script"
-      href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"
-    />
-    <link
-      rel="preload"
-      as="script"
-      href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"
-    />
-    <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -110,695 +47,468 @@
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>
-      let toggleHintShow = "Click to show";
-    </script>
-    <script>
-      let toggleHintHide = "Click to hide";
-    </script>
-    <script>
-      let toggleOpenOnPrint = "true";
-    </script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
-    <script>
-      var togglebuttonSelector = ".toggle, .admonition.dropdown";
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
-    <script>
-      const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js";
-      const thebe_selector = ".thebe,.cell";
-      const thebe_selector_input = "pre";
-      const thebe_selector_output = ".output, .cell_output";
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>
-      var togglebuttonSelector = ".toggle, .admonition.dropdown";
-    </script>
-    <script>
-      const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js";
-      const thebe_selector = ".thebe,.cell";
-      const thebe_selector_input = "pre";
-      const thebe_selector_output = ".output, .cell_output";
-    </script>
-    <script>
-      DOCUMENTATION_OPTIONS.pagename = "220411100103_Zainal_Arifin_Tugas1";
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '220411100103_Zainal_Arifin_Tugas1';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PPW Crawling Berita" href="tugas2/tugas2.html" />
     <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-  <body
-    data-bs-spy="scroll"
-    data-bs-target=".bd-toc-nav"
-    data-offset="180"
-    data-bs-root-margin="0px 0px -60%"
-    data-default-mode=""
-  >
-    <div id="pst-skip-link" class="skip-link d-print-none">
-      <a href="#main-content">Skip to main content</a>
-    </div>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    <div id="pst-scroll-pixel-helper"></div>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
 
-    <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-      <i class="fa-solid fa-arrow-up"></i>Back to top
-    </button>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
 
-    <input
-      type="checkbox"
-      class="sidebar-toggle"
-      id="pst-primary-sidebar-checkbox"
-    />
-    <label
-      class="overlay overlay-primary"
-      for="pst-primary-sidebar-checkbox"
-    ></label>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
 
-    <input
-      type="checkbox"
-      class="sidebar-toggle"
-      id="pst-secondary-sidebar-checkbox"
-    />
-    <label
-      class="overlay overlay-secondary"
-      for="pst-secondary-sidebar-checkbox"
-    ></label>
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
 
-    <div class="search-button__wrapper">
-      <div class="search-button__overlay"></div>
-      <div class="search-button__search-container">
-        <form
-          class="bd-search d-flex align-items-center"
-          action="search.html"
-          method="get"
-        >
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input
-            type="search"
-            class="form-control"
-            name="q"
-            id="search-input"
-            placeholder="Search this book..."
-            aria-label="Search this book..."
-            autocomplete="off"
-            autocorrect="off"
-            autocapitalize="off"
-            spellcheck="false"
-          />
-          <span class="search-button__kbd-shortcut"
-            ><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span
-          >
-        </form>
-      </div>
-    </div>
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="pst-async-banner-revealer d-none">
-      <aside
-        id="bd-header-version-warning"
-        class="d-none d-print-none"
-        aria-label="Version warning"
-      ></aside>
-    </div>
+  
+    
+  
 
-    <header
-      class="bd-header navbar navbar-expand-lg bd-navbar d-print-none"
-    ></header>
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="PPW - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="PPW - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
 
-    <div class="bd-container">
-      <div class="bd-container__inner bd-page-width">
-        <div class="bd-sidebar-primary bd-sidebar">
-          <div class="sidebar-header-items sidebar-primary__section"></div>
-
-          <div class="sidebar-primary-items__start sidebar-primary__section">
-            <div class="sidebar-primary-item">
-              <a class="navbar-brand logo" href="intro.html">
-                <img
-                  src="_static/logo.png"
-                  class="logo__image only-light"
-                  alt="PPW - Home"
-                />
-                <script>
-                  document.write(
-                    `<img src="_static/logo.png" class="logo__image only-dark" alt="PPW - Home"/>`
-                  );
-                </script>
-              </a>
-            </div>
-            <div class="sidebar-primary-item">
-              <script>
-                document.write(`
+ <script>
+ document.write(`
    <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
    </button>
  `);
-              </script>
-            </div>
-            <div class="sidebar-primary-item">
-              <nav class="bd-links bd-docs-nav" aria-label="Main">
-                <div class="bd-toc-item navbar-nav active">
-                  <ul class="nav bd-sidenav bd-sidenav__home-link">
-                    <li class="toctree-l1">
-                      <a class="reference internal" href="intro.html">
-                        Welcome to your Jupyter Book
-                      </a>
-                    </li>
-                  </ul>
-                  <ul class="current nav bd-sidenav">
-                    <li class="toctree-l1 current active">
-                      <a class="current reference internal" href="#"
-                        >PPW Crawling Berita</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </div>
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">PPW Crawling Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2/tugas2.html"><strong>PPW Crawling Berita</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2/vsm.html"><strong>Tugas 2 : Membuat VSM dengan isi TF-IDF berdasarkan hasil Crawling Berita Online</strong></a></li>
 
-          <div
-            class="sidebar-primary-items__end sidebar-primary__section"
-          ></div>
+</ul>
 
-          <div id="rtd-footer-container"></div>
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-        <main id="main-content" class="bd-main" role="main">
-          <div class="sbt-scroll-pixel-helper"></div>
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
 
           <div class="bd-content">
             <div class="bd-article-container">
+              
               <div class="bd-header-article d-print-none">
-                <div class="header-article-items header-article__inner">
-                  <div class="header-article-items__start">
-                    <div class="header-article-item">
-                      <button
-                        class="sidebar-toggle primary-toggle btn btn-sm"
-                        title="Toggle primary sidebar"
-                        data-bs-placement="bottom"
-                        data-bs-toggle="tooltip"
-                      >
-                        <span class="fa-solid fa-bars"></span>
-                      </button>
-                    </div>
-                  </div>
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
 
-                  <div class="header-article-items__end">
-                    <div class="header-article-item">
-                      <div class="article-header-buttons">
-                        <div class="dropdown dropdown-source-buttons">
-                          <button
-                            class="btn dropdown-toggle"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            aria-label="Source repositories"
-                          >
-                            <i class="fab fa-github"></i>
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li>
-                              <a
-                                href="https://github.com/220411100103-Zainal-Arifin/PPW"
-                                target="_blank"
-                                class="btn btn-sm btn-source-repository-button dropdown-item"
-                                title="Source repository"
-                                data-bs-placement="left"
-                                data-bs-toggle="tooltip"
-                              >
-                                <span class="btn__icon-container">
-                                  <i class="fab fa-github"></i>
-                                </span>
-                                <span class="btn__text-container"
-                                  >Repository</span
-                                >
-                              </a>
-                            </li>
+<div class="article-header-buttons">
 
-                            <li>
-                              <a
-                                href="https://github.com/220411100103-Zainal-Arifin/PPW/issues/new?title=Issue%20on%20page%20%2F220411100103_Zainal_Arifin_Tugas1.html&body=Your%20issue%20content%20here."
-                                target="_blank"
-                                class="btn btn-sm btn-source-issues-button dropdown-item"
-                                title="Open an issue"
-                                data-bs-placement="left"
-                                data-bs-toggle="tooltip"
-                              >
-                                <span class="btn__icon-container">
-                                  <i class="fas fa-lightbulb"></i>
-                                </span>
-                                <span class="btn__text-container"
-                                  >Open issue</span
-                                >
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
 
-                        <div class="dropdown dropdown-download-buttons">
-                          <button
-                            class="btn dropdown-toggle"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            aria-label="Download this page"
-                          >
-                            <i class="fas fa-download"></i>
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li>
-                              <a
-                                href="_sources/220411100103_Zainal_Arifin_Tugas1.ipynb"
-                                target="_blank"
-                                class="btn btn-sm btn-download-source-button dropdown-item"
-                                title="Download source file"
-                                data-bs-placement="left"
-                                data-bs-toggle="tooltip"
-                              >
-                                <span class="btn__icon-container">
-                                  <i class="fas fa-file"></i>
-                                </span>
-                                <span class="btn__text-container">.ipynb</span>
-                              </a>
-                            </li>
 
-                            <li>
-                              <button
-                                onclick="window.print()"
-                                class="btn btn-sm btn-download-pdf-button dropdown-item"
-                                title="Print to PDF"
-                                data-bs-placement="left"
-                                data-bs-toggle="tooltip"
-                              >
-                                <span class="btn__icon-container">
-                                  <i class="fas fa-file-pdf"></i>
-                                </span>
-                                <span class="btn__text-container">.pdf</span>
-                              </button>
-                            </li>
-                          </ul>
-                        </div>
 
-                        <button
-                          onclick="toggleFullScreen()"
-                          class="btn btn-sm btn-fullscreen-button"
-                          title="Fullscreen mode"
-                          data-bs-placement="bottom"
-                          data-bs-toggle="tooltip"
-                        >
-                          <span class="btn__icon-container">
-                            <i class="fas fa-expand"></i>
-                          </span>
-                        </button>
 
-                        <script>
-                          document.write(`
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/220411100103-Zainal-Arifin/PPW" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/220411100103-Zainal-Arifin/PPW/issues/new?title=Issue%20on%20page%20%2F220411100103_Zainal_Arifin_Tugas1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/220411100103_Zainal_Arifin_Tugas1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
   <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
     <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
     <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
-                        </script>
+</script>
 
-                        <script>
-                          document.write(`
+
+<script>
+document.write(`
   <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
-                        </script>
-                        <button
-                          class="sidebar-toggle secondary-toggle btn btn-sm"
-                          title="Toggle secondary sidebar"
-                          data-bs-placement="bottom"
-                          data-bs-toggle="tooltip"
-                        >
-                          <span class="fa-solid fa-list"></span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
 
-              <div id="jb-print-docs-body" class="onlyprint">
-                <h1>PPW Crawling Berita</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                  <div id="jb-print-toc">
-                    <div>
-                      <h2>Contents</h2>
-                    </div>
-                    <nav aria-label="Page">
-                      <ul class="visible nav section-nav flex-column">
-                        <li class="toc-h2 nav-item toc-entry">
-                          <a
-                            class="reference internal nav-link"
-                            href="#pengertian-crawling"
-                            >Pengertian Crawling</a
-                          >
-                          <ul class="nav section-nav flex-column">
-                            <li class="toc-h3 nav-item toc-entry">
-                              <a
-                                class="reference internal nav-link"
-                                href="#proses-crawling"
-                                >Proses Crawling</a
-                              >
-                              <ul class="nav section-nav flex-column">
-                                <li class="toc-h4 nav-item toc-entry">
-                                  <a
-                                    class="reference internal nav-link"
-                                    href="#tool-atau-library"
-                                    >Tool atau Library</a
-                                  >
-                                </li>
-                                <li class="toc-h4 nav-item toc-entry">
-                                  <a
-                                    class="reference internal nav-link"
-                                    href="#code-program"
-                                    >Code Program</a
-                                  >
-                                  <ul class="nav section-nav flex-column">
-                                    <li class="toc-h5 nav-item toc-entry">
-                                      <a
-                                        class="reference internal nav-link"
-                                        href="#fungsi-web-driver"
-                                        >Fungsi web_driver()</a
-                                      >
-                                    </li>
-                                    <li class="toc-h5 nav-item toc-entry">
-                                      <a
-                                        class="reference internal nav-link"
-                                        href="#fungsi-driver-get"
-                                        >Fungsi driver.get</a
-                                      >
-                                    </li>
-                                    <li class="toc-h5 nav-item toc-entry">
-                                      <a
-                                        class="reference internal nav-link"
-                                        href="#fungsi-find-elements-by-xpath"
-                                        >Fungsi find_elements(By.XPATH,’’)</a
-                                      >
-                                    </li>
-                                    <li class="toc-h5 nav-item toc-entry">
-                                      <a
-                                        class="reference internal nav-link"
-                                        href="#fungsi-get-attribute-href"
-                                        >Fungsi get_attribute(‘href’)</a
-                                      >
-                                    </li>
-                                    <li class="toc-h5 nav-item toc-entry">
-                                      <a
-                                        class="reference internal nav-link"
-                                        href="#main-crawling"
-                                        >Main Crawling</a
-                                      >
-                                    </li>
-                                    <li class="toc-h5 nav-item toc-entry">
-                                      <a
-                                        class="reference internal nav-link"
-                                        href="#fungsi-driver-quit"
-                                        >Fungsi driver.quit()</a
-                                      >
-                                    </li>
-                                    <li class="toc-h5 nav-item toc-entry">
-                                      <a
-                                        class="reference internal nav-link"
-                                        href="#convert-dataframe"
-                                        >Convert Dataframe</a
-                                      >
-                                    </li>
-                                  </ul>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-              </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>PPW Crawling Berita</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-crawling">Pengertian Crawling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-crawling">Proses Crawling</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tool-atau-library">Tool atau Library</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-program">Code Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-web-driver">Fungsi web_driver()</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-driver-get">Fungsi driver.get</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-find-elements-by-xpath">Fungsi find_elements(By.XPATH,’’)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-get-attribute-href">Fungsi get_attribute(‘href’)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#main-crawling">Main Crawling</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-driver-quit">Fungsi driver.quit()</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-dataframe">Convert Dataframe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
 
-              <div id="searchbox"></div>
-              <article class="bd-article">
-                <section
-                  class="tex2jax_ignore mathjax_ignore"
-                  id="ppw-crawling-berita"
-                >
-                  <h1>
-                    PPW Crawling Berita<a
-                      class="headerlink"
-                      href="#ppw-crawling-berita"
-                      title="Link to this heading"
-                      >#</a
-                    >
-                  </h1>
-                  <p>Dibuat Oleh:</p>
-                  <p>Nama : Zainal Arifin</p>
-                  <p>NIM : 220411100103</p>
-                  <p>Kelas : PPW A</p>
-                  <p>Link Projek :</p>
-                  <section id="pengertian-crawling">
-                    <h2>
-                      Pengertian Crawling<a
-                        class="headerlink"
-                        href="#pengertian-crawling"
-                        title="Link to this heading"
-                        >#</a
-                      >
-                    </h2>
-                    <p>
-                      Crawling adalah proses yang digunakan oleh search engine
-                      untuk menjelajahi atau merayapi website untuk mendapatkan
-                      informasi sebagai respons terhadap kueri yang diberikan.
-                      Proses ini dilakukan dengan bantuan bot yang dikenal
-                      dengan nama web crawler atau crawler. Crawler adalah mesin
-                      pencari bot yang khusus digunakan untuk mencari,
-                      mengunjungi, dan menganalisis konten situs web dan
-                      informasi lainnya di internet. Crawling data bertujuan
-                      untuk mengumpulkan data secara otomatis dari website dan
-                      membangun indeks data untuk digunakan mesin pencari.
-                    </p>
-                    <section id="proses-crawling">
-                      <h3>
-                        Proses Crawling<a
-                          class="headerlink"
-                          href="#proses-crawling"
-                          title="Link to this heading"
-                          >#</a
-                        >
-                      </h3>
-                      <section id="tool-atau-library">
-                        <h4>
-                          Tool atau Library<a
-                            class="headerlink"
-                            href="#tool-atau-library"
-                            title="Link to this heading"
-                            >#</a
-                          >
-                        </h4>
-                        <div class="cell docutils container">
-                          <div class="cell_input docutils container">
-                            <div class="highlight-ipython3 notranslate">
-                              <div class="highlight">
-                                <pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ppw-crawling-berita">
+<h1>PPW Crawling Berita<a class="headerlink" href="#ppw-crawling-berita" title="Link to this heading">#</a></h1>
+<p>Dibuat Oleh:</p>
+<p>Nama : Zainal Arifin</p>
+<p>NIM : 220411100103</p>
+<p>Kelas : PPW A</p>
+<p>Link Projek :</p>
+<section id="pengertian-crawling">
+<h2>Pengertian Crawling<a class="headerlink" href="#pengertian-crawling" title="Link to this heading">#</a></h2>
+<p>Crawling adalah proses yang digunakan oleh search engine untuk menjelajahi atau merayapi website untuk mendapatkan informasi sebagai respons terhadap kueri yang diberikan. Proses ini dilakukan dengan bantuan bot yang dikenal dengan nama web crawler atau crawler. Crawler adalah mesin pencari bot yang khusus digunakan untuk mencari, mengunjungi, dan menganalisis konten situs web dan informasi lainnya di internet. Crawling data bertujuan untuk mengumpulkan data secara otomatis dari website dan membangun indeks data untuk digunakan mesin pencari.</p>
+<section id="proses-crawling">
+<h3>Proses Crawling<a class="headerlink" href="#proses-crawling" title="Link to this heading">#</a></h3>
+<section id="tool-atau-library">
+<h4>Tool atau Library<a class="headerlink" href="#tool-atau-library" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
 <span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
 <span class="kn">import</span> <span class="nn">time</span>
-</pre>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <ul class="simple">
-                          <li>
-                            <p>
-                              Pandas digunakan untuk membuat dataframe agar
-                              mudah dibaca.
-                            </p>
-                          </li>
-                          <li>
-                            <p>
-                              Selenium digunakan untuk mengotomatiskan browser
-                              agar dapat berinteraksi dengan elemen-elemen di
-                              halaman web.
-                            </p>
-                          </li>
-                          <li>
-                            <p>
-                              Time berfungsi untuk memberikan jeda ketika ingin
-                              berpindah halaman.
-                            </p>
-                          </li>
-                        </ul>
-                      </section>
-                      <section id="code-program">
-                        <h4>
-                          Code Program<a
-                            class="headerlink"
-                            href="#code-program"
-                            title="Link to this heading"
-                            >#</a
-                          >
-                        </h4>
-                        <section id="fungsi-web-driver">
-                          <h5>
-                            Fungsi web_driver()<a
-                              class="headerlink"
-                              href="#fungsi-web-driver"
-                              title="Link to this heading"
-                              >#</a
-                            >
-                          </h5>
-                          <div class="cell docutils container">
-                            <div class="cell_input docutils container">
-                              <div class="highlight-ipython3 notranslate">
-                                <div class="highlight">
-                                  <pre><span></span><span class="k">def</span> <span class="nf">web_driver</span><span class="p">():</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Pandas digunakan untuk membuat dataframe agar mudah dibaca.</p></li>
+<li><p>Selenium digunakan untuk mengotomatiskan browser agar dapat berinteraksi dengan elemen-elemen di halaman web.</p></li>
+<li><p>Time berfungsi untuk memberikan jeda ketika ingin berpindah halaman.</p></li>
+</ul>
+</section>
+<section id="code-program">
+<h4>Code Program<a class="headerlink" href="#code-program" title="Link to this heading">#</a></h4>
+<section id="fungsi-web-driver">
+<h5>Fungsi web_driver()<a class="headerlink" href="#fungsi-web-driver" title="Link to this heading">#</a></h5>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">web_driver</span><span class="p">():</span>
     <span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">ChromeOptions</span><span class="p">()</span>
     <span class="n">options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--headless&#39;</span><span class="p">)</span>
     <span class="n">options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--no-sandbox&#39;</span><span class="p">)</span>
     <span class="n">options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--disable-dev-shm-usage&#39;</span><span class="p">)</span>
     <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">driver</span>
-</pre>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <p>
-                            Fungsi untuk menginisialisasi browser Chrome secara
-                            otomatis dengan opsi headless, tanpa tampilan
-                            grafis.
-                          </p>
-                          <div class="cell docutils container">
-                            <div class="cell_input docutils container">
-                              <div class="highlight-ipython3 notranslate">
-                                <div class="highlight">
-                                  <pre><span></span><span class="n">driver</span> <span class="o">=</span> <span class="n">web_driver</span><span class="p">()</span>
-</pre>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="cell_output docutils container">
-                              <div
-                                class="output traceback highlight-ipythontb notranslate"
-                              >
-                                <div class="highlight">
-                                  <pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-</pre>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <p>Digunakan untuk memanggil fungsi web_driver()</p>
-                        </section>
-                        <section id="fungsi-driver-get">
-                          <h5>
-                            Fungsi driver.get<a
-                              class="headerlink"
-                              href="#fungsi-driver-get"
-                              title="Link to this heading"
-                              >#</a
-                            >
-                          </h5>
-                          <div class="cell docutils container">
-                            <div class="cell_input docutils container">
-                              <div class="highlight-ipython3 notranslate">
-                                <div class="highlight">
-                                  <pre><span></span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://tirto.id/news/news-plus&quot;</span><span class="p">)</span>
-</pre>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <p>
-                            Mengarahkan browser otomatis yang diinisialisasi
-                            oleh Selenium ke URL “<a
-                              class="reference external"
-                              href="https://tirto.id/news/news-plus"
-                              >https://tirto.id/news/news-plus</a
-                            >”.
-                          </p>
-                        </section>
-                        <section id="fungsi-find-elements-by-xpath">
-                          <h5>
-                            Fungsi find_elements(By.XPATH,’’)<a
-                              class="headerlink"
-                              href="#fungsi-find-elements-by-xpath"
-                              title="Link to this heading"
-                              >#</a
-                            >
-                          </h5>
-                          <div class="cell docutils container">
-                            <div class="cell_input docutils container">
-                              <div class="highlight-ipython3 notranslate">
-                                <div class="highlight">
-                                  <pre><span></span><span class="n">contoh</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s1">&#39;//*[@id=&quot;main&quot;]/section[2]/div/div[2]/div/div[1]/div/div[2]/h3/a&#39;</span><span class="p">)</span>
-</pre>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <p>
-                            Menemukan semua elemen yang berisi judul artikel
-                            pada halaman web
-                          </p>
-                        </section>
-                        <section id="fungsi-get-attribute-href">
-                          <h5>
-                            Fungsi get_attribute(‘href’)<a
-                              class="headerlink"
-                              href="#fungsi-get-attribute-href"
-                              title="Link to this heading"
-                              >#</a
-                            >
-                          </h5>
-                          <div class="cell docutils container">
-                            <div class="cell_input docutils container">
-                              <div class="highlight-ipython3 notranslate">
-                                <div class="highlight">
-                                  <pre><span></span><span class="n">urls</span> <span class="o">=</span> <span class="p">[</span><span class="n">link</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">contoh</span><span class="p">]</span>
-</pre>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <p>
-                            Membuat daftar URL dari elemen-elemen yang ditemukan
-                            pada variabel contoh
-                          </p>
-                          <div class="cell docutils container">
-                            <div class="cell_input docutils container">
-                              <div class="highlight-ipython3 notranslate">
-                                <div class="highlight">
-                                  <pre><span></span><span class="n">data_list</span> <span class="o">=</span> <span class="p">[]</span>
-</pre>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-                        <section id="main-crawling">
-                          <h5>
-                            Main Crawling<a
-                              class="headerlink"
-                              href="#main-crawling"
-                              title="Link to this heading"
-                              >#</a
-                            >
-                          </h5>
-                          <div class="cell docutils container">
-                            <div class="cell_input docutils container">
-                              <div class="highlight-ipython3 notranslate">
-                                <div class="highlight">
-                                  <pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">contoh</span><span class="p">:</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Fungsi untuk menginisialisasi browser Chrome secara otomatis dengan opsi headless, tanpa tampilan grafis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">driver</span> <span class="o">=</span> <span class="n">web_driver</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Digunakan untuk memanggil fungsi web_driver()</p>
+</section>
+<section id="fungsi-driver-get">
+<h5>Fungsi driver.get<a class="headerlink" href="#fungsi-driver-get" title="Link to this heading">#</a></h5>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://tirto.id/news/news-plus&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mengarahkan browser otomatis yang diinisialisasi oleh Selenium ke URL “<a class="reference external" href="https://tirto.id/news/news-plus">https://tirto.id/news/news-plus</a>”.</p>
+</section>
+<section id="fungsi-find-elements-by-xpath">
+<h5>Fungsi find_elements(By.XPATH,’’)<a class="headerlink" href="#fungsi-find-elements-by-xpath" title="Link to this heading">#</a></h5>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contoh</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s1">&#39;//*[@id=&quot;main&quot;]/section[2]/div/div[2]/div/div[1]/div/div[2]/h3/a&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Menemukan semua elemen yang berisi judul artikel pada halaman web</p>
+</section>
+<section id="fungsi-get-attribute-href">
+<h5>Fungsi get_attribute(‘href’)<a class="headerlink" href="#fungsi-get-attribute-href" title="Link to this heading">#</a></h5>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urls</span> <span class="o">=</span> <span class="p">[</span><span class="n">link</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">contoh</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Membuat daftar URL dari elemen-elemen yang ditemukan pada variabel contoh</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_list</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="main-crawling">
+<h5>Main Crawling<a class="headerlink" href="#main-crawling" title="Link to this heading">#</a></h5>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">contoh</span><span class="p">:</span>
     <span class="n">url</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">url</span><span class="p">:</span>
         <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
@@ -829,761 +539,197 @@
 
         <span class="n">driver</span><span class="o">.</span><span class="n">back</span><span class="p">()</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <p>
-                            Mengunjungi setiap URL berita, mengambil informasi
-                            judul, isi, tanggal, dan kategori, lalu menyimpannya
-                          </p>
-                        </section>
-                        <section id="fungsi-driver-quit">
-                          <h5>
-                            Fungsi driver.quit()<a
-                              class="headerlink"
-                              href="#fungsi-driver-quit"
-                              title="Link to this heading"
-                              >#</a
-                            >
-                          </h5>
-                          <div class="cell docutils container">
-                            <div class="cell_input docutils container">
-                              <div class="highlight-ipython3 notranslate">
-                                <div class="highlight">
-                                  <pre><span></span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-</pre>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <p>Menutup browser dan mengakhiri sesi Selenium</p>
-                        </section>
-                        <section id="convert-dataframe">
-                          <h5>
-                            Convert Dataframe<a
-                              class="headerlink"
-                              href="#convert-dataframe"
-                              title="Link to this heading"
-                              >#</a
-                            >
-                          </h5>
-                          <div class="cell docutils container">
-                            <div class="cell_input docutils container">
-                              <div class="highlight-ipython3 notranslate">
-                                <div class="highlight">
-                                  <pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mengunjungi setiap URL berita, mengambil informasi judul, isi, tanggal, dan kategori, lalu menyimpannya</p>
+</section>
+<section id="fungsi-driver-quit">
+<h5>Fungsi driver.quit()<a class="headerlink" href="#fungsi-driver-quit" title="Link to this heading">#</a></h5>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Menutup browser dan mengakhiri sesi Selenium</p>
+</section>
+<section id="convert-dataframe">
+<h5>Convert Dataframe<a class="headerlink" href="#convert-dataframe" title="Link to this heading">#</a></h5>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_list</span><span class="p">)</span>
 <span class="n">df</span>
-</pre>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="cell_output docutils container">
-                              <div class="output text_html">
-                                <div
-                                  id="df-65e072cc-f660-4b69-b4a1-3563c452f15e"
-                                  class="colab-df-container"
-                                >
-                                  <div>
-                                    <style scoped>
-                                      .dataframe tbody tr th:only-of-type {
-                                        vertical-align: middle;
-                                      }
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-                                      .dataframe tbody tr th {
-                                        vertical-align: top;
-                                      }
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-                                      .dataframe thead th {
-                                        text-align: right;
-                                      }
-                                    </style>
-                                    <table border="1" class="dataframe">
-                                      <thead>
-                                        <tr style="text-align: right">
-                                          <th></th>
-                                          <th>Judul</th>
-                                          <th>Kategori</th>
-                                          <th>Tanggal</th>
-                                          <th>Isi</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <th>0</th>
-                                          <td>
-                                            Menagih Janji Sosialisasi Tol
-                                            Solo-Jogja agar ...
-                                          </td>
-                                          <td>tirto.id - News</td>
-                                          <td>Terbit 4 Sep 2024 11:50 WIB,</td>
-                                          <td>
-                                            tirto.id - Tahapan pembangunan Tol
-                                            Solo-Yogyak...
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <th>1</th>
-                                          <td>
-                                            Teladan Kesederhanaan Paus
-                                            Fransiskus bagi Pej...
-                                          </td>
-                                          <td>tirto.id - News</td>
-                                          <td>Terbit 4 Sep 2024 10:00 WIB,</td>
-                                          <td>
-                                            tirto.id - Paus Fransiskus tersenyum
-                                            sambil me...
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <th>2</th>
-                                          <td>
-                                            Nasib Kelas Menengah Rentan,
-                                            Pemerintah Harusn...
-                                          </td>
-                                          <td>tirto.id - News</td>
-                                          <td>Terbit 4 Sep 2024 08:00 WIB,</td>
-                                          <td>
-                                            tirto.id - Badan Pusat Statistik
-                                            (BPS) mencata...
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <th>3</th>
-                                          <td>
-                                            Blunder Pramono Tawarkan Ide Jalan
-                                            Layang Moto...
-                                          </td>
-                                          <td>tirto.id - News</td>
-                                          <td>Terbit 4 Sep 2024 07:00 WIB,</td>
-                                          <td>
-                                            tirto.id - Bakal calon Gubernur DKI
-                                            Jakarta, P...
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <th>4</th>
-                                          <td>
-                                            Menakar Kans Risma dan Luluk Colong
-                                            Dominasi K...
-                                          </td>
-                                          <td>tirto.id - News</td>
-                                          <td>Terbit 4 Sep 2024 06:00 WIB,</td>
-                                          <td>
-                                            tirto.id - Pilkada Jatim 2024
-                                            menjadi gelangga...
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <th>5</th>
-                                          <td>
-                                            Raih Penghargaan, Heru Budi Harus
-                                            Tetap Jaga I...
-                                          </td>
-                                          <td>tirto.id - News</td>
-                                          <td>Terbit 3 Sep 2024 13:36 WIB,</td>
-                                          <td>
-                                            tirto.id - Badan Pusat Statistik
-                                            (BPS) DKI Jak...
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <th>6</th>
-                                          <td>
-                                            Kunjungan Bersejarah Paus Fransiskus
-                                            Merajut D...
-                                          </td>
-                                          <td>tirto.id - News</td>
-                                          <td>Terbit 3 Sep 2024 11:13 WIB,</td>
-                                          <td>
-                                            tirto.id - Dua hari sebelum
-                                            menjejakkan kaki d...
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <th>7</th>
-                                          <td>
-                                            Wacana DPR Mengevaluasi MK,
-                                            Pembegalan Konstit...
-                                          </td>
-                                          <td>tirto.id - News</td>
-                                          <td>Terbit 3 Sep 2024 08:00 WIB,</td>
-                                          <td>
-                                            tirto.id - Rencana DPR RI
-                                            mengevaluasi kinerja...
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <th>8</th>
-                                          <td>
-                                            Ide Parpol Baru Anies Baswedan
-                                            Jangan Layu Seb...
-                                          </td>
-                                          <td>tirto.id - News</td>
-                                          <td>Terbit 3 Sep 2024 07:00 WIB,</td>
-                                          <td>
-                                            tirto.id - Lewat video berdurasi
-                                            14:44 menit, ...
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <th>9</th>
-                                          <td>
-                                            Menyoal Sertifikasi Halal Truk
-                                            Logistik yang K...
-                                          </td>
-                                          <td>tirto.id - News</td>
-                                          <td>Terbit 3 Sep 2024 06:00 WIB,</td>
-                                          <td>
-                                            tirto.id - Wacana penerapan
-                                            sertifikasi halal ...
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </div>
-                                  <div class="colab-df-buttons">
-                                    <div class="colab-df-container">
-                                      <button
-                                        class="colab-df-convert"
-                                        onclick="convertToInteractive('df-65e072cc-f660-4b69-b4a1-3563c452f15e')"
-                                        title="Convert this dataframe to an interactive table."
-                                        style="display: none"
-                                      >
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          height="24px"
-                                          viewBox="0 -960 960 960"
-                                        >
-                                          <path
-                                            d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"
-                                          />
-                                        </svg>
-                                      </button>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+</section>
 
-                                      <style>
-                                        .colab-df-container {
-                                          display: flex;
-                                          gap: 12px;
-                                        }
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
-                                        .colab-df-convert {
-                                          background-color: #e8f0fe;
-                                          border: none;
-                                          border-radius: 50%;
-                                          cursor: pointer;
-                                          display: none;
-                                          fill: #1967d2;
-                                          height: 32px;
-                                          padding: 0 0 0 0;
-                                          width: 32px;
-                                        }
+                </article>
+              
 
-                                        .colab-df-convert:hover {
-                                          background-color: #e2ebfa;
-                                          box-shadow: 0px 1px 2px
-                                              rgba(60, 64, 67, 0.3),
-                                            0px 1px 3px 1px
-                                              rgba(60, 64, 67, 0.15);
-                                          fill: #174ea6;
-                                        }
-
-                                        .colab-df-buttons div {
-                                          margin-bottom: 4px;
-                                        }
-
-                                        [theme="dark"] .colab-df-convert {
-                                          background-color: #3b4455;
-                                          fill: #d2e3fc;
-                                        }
-
-                                        [theme="dark"] .colab-df-convert:hover {
-                                          background-color: #434b5c;
-                                          box-shadow: 0px 1px 3px 1px
-                                            rgba(0, 0, 0, 0.15);
-                                          filter: drop-shadow(
-                                            0px 1px 2px rgba(0, 0, 0, 0.3)
-                                          );
-                                          fill: #ffffff;
-                                        }
-                                      </style>
-
-                                      <script>
-                                        const buttonEl = document.querySelector(
-                                          "#df-65e072cc-f660-4b69-b4a1-3563c452f15e button.colab-df-convert"
-                                        );
-                                        buttonEl.style.display = google.colab
-                                          .kernel.accessAllowed
-                                          ? "block"
-                                          : "none";
-
-                                        async function convertToInteractive(
-                                          key
-                                        ) {
-                                          const element =
-                                            document.querySelector(
-                                              "#df-65e072cc-f660-4b69-b4a1-3563c452f15e"
-                                            );
-                                          const dataTable =
-                                            await google.colab.kernel.invokeFunction(
-                                              "convertToInteractive",
-                                              [key],
-                                              {}
-                                            );
-                                          if (!dataTable) return;
-
-                                          const docLinkHtml =
-                                            "Like what you see? Visit the " +
-                                            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>' +
-                                            " to learn more about interactive tables.";
-                                          element.innerHTML = "";
-                                          dataTable["output_type"] =
-                                            "display_data";
-                                          await google.colab.output.renderOutput(
-                                            dataTable,
-                                            element
-                                          );
-                                          const docLink =
-                                            document.createElement("div");
-                                          docLink.innerHTML = docLinkHtml;
-                                          element.appendChild(docLink);
-                                        }
-                                      </script>
-                                    </div>
-
-                                    <div
-                                      id="df-2a55c154-0c36-43b0-bb42-2231bdd86a01"
-                                    >
-                                      <button
-                                        class="colab-df-quickchart"
-                                        onclick="quickchart('df-2a55c154-0c36-43b0-bb42-2231bdd86a01')"
-                                        title="Suggest charts"
-                                        style="display: none"
-                                      >
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          height="24px"
-                                          viewBox="0 0 24 24"
-                                          width="24px"
-                                        >
-                                          <g>
-                                            <path
-                                              d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"
-                                            />
-                                          </g>
-                                        </svg>
-                                      </button>
-
-                                      <style>
-                                        .colab-df-quickchart {
-                                          --bg-color: #e8f0fe;
-                                          --fill-color: #1967d2;
-                                          --hover-bg-color: #e2ebfa;
-                                          --hover-fill-color: #174ea6;
-                                          --disabled-fill-color: #aaa;
-                                          --disabled-bg-color: #ddd;
-                                        }
-
-                                        [theme="dark"] .colab-df-quickchart {
-                                          --bg-color: #3b4455;
-                                          --fill-color: #d2e3fc;
-                                          --hover-bg-color: #434b5c;
-                                          --hover-fill-color: #ffffff;
-                                          --disabled-bg-color: #3b4455;
-                                          --disabled-fill-color: #666;
-                                        }
-
-                                        .colab-df-quickchart {
-                                          background-color: var(--bg-color);
-                                          border: none;
-                                          border-radius: 50%;
-                                          cursor: pointer;
-                                          display: none;
-                                          fill: var(--fill-color);
-                                          height: 32px;
-                                          padding: 0;
-                                          width: 32px;
-                                        }
-
-                                        .colab-df-quickchart:hover {
-                                          background-color: var(
-                                            --hover-bg-color
-                                          );
-                                          box-shadow: 0 1px 2px
-                                              rgba(60, 64, 67, 0.3),
-                                            0 1px 3px 1px rgba(60, 64, 67, 0.15);
-                                          fill: var(--button-hover-fill-color);
-                                        }
-
-                                        .colab-df-quickchart-complete:disabled,
-                                        .colab-df-quickchart-complete:disabled:hover {
-                                          background-color: var(
-                                            --disabled-bg-color
-                                          );
-                                          fill: var(--disabled-fill-color);
-                                          box-shadow: none;
-                                        }
-
-                                        .colab-df-spinner {
-                                          border: 2px solid var(--fill-color);
-                                          border-color: transparent;
-                                          border-bottom-color: var(
-                                            --fill-color
-                                          );
-                                          animation: spin 1s steps(1) infinite;
-                                        }
-
-                                        @keyframes spin {
-                                          0% {
-                                            border-color: transparent;
-                                            border-bottom-color: var(
-                                              --fill-color
-                                            );
-                                            border-left-color: var(
-                                              --fill-color
-                                            );
-                                          }
-                                          20% {
-                                            border-color: transparent;
-                                            border-left-color: var(
-                                              --fill-color
-                                            );
-                                            border-top-color: var(--fill-color);
-                                          }
-                                          30% {
-                                            border-color: transparent;
-                                            border-left-color: var(
-                                              --fill-color
-                                            );
-                                            border-top-color: var(--fill-color);
-                                            border-right-color: var(
-                                              --fill-color
-                                            );
-                                          }
-                                          40% {
-                                            border-color: transparent;
-                                            border-right-color: var(
-                                              --fill-color
-                                            );
-                                            border-top-color: var(--fill-color);
-                                          }
-                                          60% {
-                                            border-color: transparent;
-                                            border-right-color: var(
-                                              --fill-color
-                                            );
-                                          }
-                                          80% {
-                                            border-color: transparent;
-                                            border-right-color: var(
-                                              --fill-color
-                                            );
-                                            border-bottom-color: var(
-                                              --fill-color
-                                            );
-                                          }
-                                          90% {
-                                            border-color: transparent;
-                                            border-bottom-color: var(
-                                              --fill-color
-                                            );
-                                          }
-                                        }
-                                      </style>
-
-                                      <script>
-                                        async function quickchart(key) {
-                                          const quickchartButtonEl =
-                                            document.querySelector(
-                                              "#" + key + " button"
-                                            );
-                                          quickchartButtonEl.disabled = true; // To prevent multiple clicks.
-                                          quickchartButtonEl.classList.add(
-                                            "colab-df-spinner"
-                                          );
-                                          try {
-                                            const charts =
-                                              await google.colab.kernel.invokeFunction(
-                                                "suggestCharts",
-                                                [key],
-                                                {}
-                                              );
-                                          } catch (error) {
-                                            console.error(
-                                              "Error during call to suggestCharts:",
-                                              error
-                                            );
-                                          }
-                                          quickchartButtonEl.classList.remove(
-                                            "colab-df-spinner"
-                                          );
-                                          quickchartButtonEl.classList.add(
-                                            "colab-df-quickchart-complete"
-                                          );
-                                        }
-                                        (() => {
-                                          let quickchartButtonEl =
-                                            document.querySelector(
-                                              "#df-2a55c154-0c36-43b0-bb42-2231bdd86a01 button"
-                                            );
-                                          quickchartButtonEl.style.display =
-                                            google.colab.kernel.accessAllowed
-                                              ? "block"
-                                              : "none";
-                                        })();
-                                      </script>
-                                    </div>
-
-                                    <div
-                                      id="id_f0652918-7309-44b3-8c6d-7f8ab0457465"
-                                    >
-                                      <style>
-                                        .colab-df-generate {
-                                          background-color: #e8f0fe;
-                                          border: none;
-                                          border-radius: 50%;
-                                          cursor: pointer;
-                                          display: none;
-                                          fill: #1967d2;
-                                          height: 32px;
-                                          padding: 0 0 0 0;
-                                          width: 32px;
-                                        }
-
-                                        .colab-df-generate:hover {
-                                          background-color: #e2ebfa;
-                                          box-shadow: 0px 1px 2px
-                                              rgba(60, 64, 67, 0.3),
-                                            0px 1px 3px 1px
-                                              rgba(60, 64, 67, 0.15);
-                                          fill: #174ea6;
-                                        }
-
-                                        [theme="dark"] .colab-df-generate {
-                                          background-color: #3b4455;
-                                          fill: #d2e3fc;
-                                        }
-
-                                        [theme="dark"]
-                                          .colab-df-generate:hover {
-                                          background-color: #434b5c;
-                                          box-shadow: 0px 1px 3px 1px
-                                            rgba(0, 0, 0, 0.15);
-                                          filter: drop-shadow(
-                                            0px 1px 2px rgba(0, 0, 0, 0.3)
-                                          );
-                                          fill: #ffffff;
-                                        }
-                                      </style>
-                                      <button
-                                        class="colab-df-generate"
-                                        onclick="generateWithVariable('df')"
-                                        title="Generate code using this dataframe."
-                                        style="display: none"
-                                      >
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          height="24px"
-                                          viewBox="0 0 24 24"
-                                          width="24px"
-                                        >
-                                          <path
-                                            d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"
-                                          />
-                                        </svg>
-                                      </button>
-                                      <script>
-                                        (() => {
-                                          const buttonEl =
-                                            document.querySelector(
-                                              "#id_f0652918-7309-44b3-8c6d-7f8ab0457465 button.colab-df-generate"
-                                            );
-                                          buttonEl.style.display = google.colab
-                                            .kernel.accessAllowed
-                                            ? "block"
-                                            : "none";
-
-                                          buttonEl.onclick = () => {
-                                            google.colab.notebook.generateWithVariable(
-                                              "df"
-                                            );
-                                          };
-                                        })();
-                                      </script>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-                      </section>
-                    </section>
-                  </section>
-                </section>
-
-                <script type="text/x-thebe-config">
-                  {
-                      requestKernel: true,
-                      binderOptions: {
-                          repo: "binder-examples/jupyter-stacks-datascience",
-                          ref: "master",
-                      },
-                      codeMirrorConfig: {
-                          theme: "abcdef",
-                          mode: "python"
-                      },
-                      kernelOptions: {
-                          name: "python3",
-                          path: "./."
-                      },
-                      predefinedOutput: true
-                  }
-                </script>
-                <script>
-                  kernelName = "python3";
-                </script>
-              </article>
-
-              <footer class="prev-next-footer d-print-none">
-                <div class="prev-next-area">
-                  <a class="left-prev" href="intro.html" title="previous page">
-                    <i class="fa-solid fa-angle-left"></i>
-                    <div class="prev-next-info">
-                      <p class="prev-next-subtitle">previous</p>
-                      <p class="prev-next-title">
-                        Welcome to your Jupyter Book
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </footer>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tugas2/tugas2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>PPW Crawling Berita</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
             </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-            <div class="bd-sidebar-secondary bd-toc">
-              <div class="sidebar-secondary-items sidebar-secondary__inner">
-                <div class="sidebar-secondary-item">
-                  <div class="page-toc tocsection onthispage">
-                    <i class="fa-solid fa-list"></i> Contents
-                  </div>
-                  <nav class="bd-toc-nav page-toc">
-                    <ul class="visible nav section-nav flex-column">
-                      <li class="toc-h2 nav-item toc-entry">
-                        <a
-                          class="reference internal nav-link"
-                          href="#pengertian-crawling"
-                          >Pengertian Crawling</a
-                        >
-                        <ul class="nav section-nav flex-column">
-                          <li class="toc-h3 nav-item toc-entry">
-                            <a
-                              class="reference internal nav-link"
-                              href="#proses-crawling"
-                              >Proses Crawling</a
-                            >
-                            <ul class="nav section-nav flex-column">
-                              <li class="toc-h4 nav-item toc-entry">
-                                <a
-                                  class="reference internal nav-link"
-                                  href="#tool-atau-library"
-                                  >Tool atau Library</a
-                                >
-                              </li>
-                              <li class="toc-h4 nav-item toc-entry">
-                                <a
-                                  class="reference internal nav-link"
-                                  href="#code-program"
-                                  >Code Program</a
-                                >
-                                <ul class="nav section-nav flex-column">
-                                  <li class="toc-h5 nav-item toc-entry">
-                                    <a
-                                      class="reference internal nav-link"
-                                      href="#fungsi-web-driver"
-                                      >Fungsi web_driver()</a
-                                    >
-                                  </li>
-                                  <li class="toc-h5 nav-item toc-entry">
-                                    <a
-                                      class="reference internal nav-link"
-                                      href="#fungsi-driver-get"
-                                      >Fungsi driver.get</a
-                                    >
-                                  </li>
-                                  <li class="toc-h5 nav-item toc-entry">
-                                    <a
-                                      class="reference internal nav-link"
-                                      href="#fungsi-find-elements-by-xpath"
-                                      >Fungsi find_elements(By.XPATH,’’)</a
-                                    >
-                                  </li>
-                                  <li class="toc-h5 nav-item toc-entry">
-                                    <a
-                                      class="reference internal nav-link"
-                                      href="#fungsi-get-attribute-href"
-                                      >Fungsi get_attribute(‘href’)</a
-                                    >
-                                  </li>
-                                  <li class="toc-h5 nav-item toc-entry">
-                                    <a
-                                      class="reference internal nav-link"
-                                      href="#main-crawling"
-                                      >Main Crawling</a
-                                    >
-                                  </li>
-                                  <li class="toc-h5 nav-item toc-entry">
-                                    <a
-                                      class="reference internal nav-link"
-                                      href="#fungsi-driver-quit"
-                                      >Fungsi driver.quit()</a
-                                    >
-                                  </li>
-                                  <li class="toc-h5 nav-item toc-entry">
-                                    <a
-                                      class="reference internal nav-link"
-                                      href="#convert-dataframe"
-                                      >Convert Dataframe</a
-                                    >
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-crawling">Pengertian Crawling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-crawling">Proses Crawling</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tool-atau-library">Tool atau Library</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-program">Code Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-web-driver">Fungsi web_driver()</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-driver-get">Fungsi driver.get</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-find-elements-by-xpath">Fungsi find_elements(By.XPATH,’’)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-get-attribute-href">Fungsi get_attribute(‘href’)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#main-crawling">Main Crawling</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-driver-quit">Fungsi driver.quit()</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-dataframe">Convert Dataframe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner container">
-              <div class="footer-item">
-                <p class="component-author">By Zainal Arifin</p>
-              </div>
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Zainal Arifin
+</p>
 
-              <div class="footer-item">
-                <p class="copyright">
-                  © Copyright 2024.
-                  <br />
-                </p>
-              </div>
+  </div>
+  
+  <div class="footer-item">
+    
 
-              <div class="footer-item"></div>
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
 
-              <div class="footer-item"></div>
-            </div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
           </footer>
-        </main>
-      </div>
+        
+
+      </main>
     </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <!-- Scripts loaded after <body> so the DOM is not blocked -->
-    <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-    <script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
-
-    <footer class="bd-footer"></footer>
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

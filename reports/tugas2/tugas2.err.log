@@ -37,6 +37,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-driver = web_driver()
+['def extract_category_data(driver):', '    articles = driver.find_elements(By.XPATH, \'//div[@class="item"]\')', "    article_urls = [article.find_element(By.XPATH, './/a').get_attribute('href') for article in articles]", '    return article_urls', '']
+...
+['    print(f"Scraping category: {category[\'name\']}")', '    category_data = scrape_category_page(driver, category["url"], category["name"], max_articles=50)', '    all_data.extend(category_data)', '', 'driver.quit()']
 -------------------
 
