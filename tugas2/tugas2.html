@@ -184,6 +184,9 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>PPW Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="vsm.html"><strong>Tugas 2 : Membuat VSM dengan isi TF-IDF berdasarkan hasil Crawling Berita Online</strong></a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../tugas%203/train.html">Logistic Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tugas%205/Tugas_6%28Summary_centrality%29.html">Tugas 6 <strong>Summary Dokumen</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tugas%206/Tugas_7%28Keyword_Extraction%29.html">Tugas 7 <strong>Keyword Extraction</strong></a></li>
 </ul>
 
     </div>
@@ -410,35 +413,34 @@ document.write(`
 <p><strong>Tool atau Library</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>selenium
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">selenium</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: selenium in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (4.24.0)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.26 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from urllib3[socks]&lt;3,&gt;=1.26-&gt;selenium) (2.2.2)
-Requirement already satisfied: trio~=0.17 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from selenium) (0.26.2)
-Requirement already satisfied: trio-websocket~=0.9 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from selenium) (0.11.1)
-Requirement already satisfied: certifi&gt;=2021.10.8 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from selenium) (2024.8.30)
-Requirement already satisfied: typing_extensions~=4.9 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from selenium) (4.12.2)
-Requirement already satisfied: websocket-client~=1.8 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from selenium) (1.8.0)
-Requirement already satisfied: attrs&gt;=23.2.0 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from trio~=0.17-&gt;selenium) (24.2.0)
-Requirement already satisfied: sortedcontainers in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from trio~=0.17-&gt;selenium) (2.4.0)
-Requirement already satisfied: idna in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from trio~=0.17-&gt;selenium) (3.8)
-Requirement already satisfied: outcome in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from trio~=0.17-&gt;selenium) (1.3.0.post0)
-Requirement already satisfied: sniffio&gt;=1.3.0 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from trio~=0.17-&gt;selenium) (1.3.1)
-Requirement already satisfied: cffi&gt;=1.14 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from trio~=0.17-&gt;selenium) (1.17.0)
-Requirement already satisfied: wsproto&gt;=0.14 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from trio-websocket~=0.9-&gt;selenium) (1.2.0)
-Requirement already satisfied: pysocks!=1.5.7,&lt;2.0,&gt;=1.5.6 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from urllib3[socks]&lt;3,&gt;=1.26-&gt;selenium) (1.7.1)
-Requirement already satisfied: pycparser in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from cffi&gt;=1.14-&gt;trio~=0.17-&gt;selenium) (2.22)
-Requirement already satisfied: h11&lt;1,&gt;=0.9.0 in c:\users\zarif\appdata\local\programs\python\python312\lib\site-packages (from wsproto&gt;=0.14-&gt;trio-websocket~=0.9-&gt;selenium) (0.14.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: selenium in /usr/local/lib/python3.10/dist-packages (4.24.0)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.26 in /usr/local/lib/python3.10/dist-packages (from urllib3[socks]&lt;3,&gt;=1.26-&gt;selenium) (2.0.7)
+Requirement already satisfied: trio~=0.17 in /usr/local/lib/python3.10/dist-packages (from selenium) (0.26.2)
+Requirement already satisfied: trio-websocket~=0.9 in /usr/local/lib/python3.10/dist-packages (from selenium) (0.11.1)
+Requirement already satisfied: certifi&gt;=2021.10.8 in /usr/local/lib/python3.10/dist-packages (from selenium) (2024.8.30)
+Requirement already satisfied: typing_extensions~=4.9 in /usr/local/lib/python3.10/dist-packages (from selenium) (4.12.2)
+Requirement already satisfied: websocket-client~=1.8 in /usr/local/lib/python3.10/dist-packages (from selenium) (1.8.0)
+Requirement already satisfied: attrs&gt;=23.2.0 in /usr/local/lib/python3.10/dist-packages (from trio~=0.17-&gt;selenium) (24.2.0)
+Requirement already satisfied: sortedcontainers in /usr/local/lib/python3.10/dist-packages (from trio~=0.17-&gt;selenium) (2.4.0)
+Requirement already satisfied: idna in /usr/local/lib/python3.10/dist-packages (from trio~=0.17-&gt;selenium) (3.8)
+Requirement already satisfied: outcome in /usr/local/lib/python3.10/dist-packages (from trio~=0.17-&gt;selenium) (1.3.0.post0)
+Requirement already satisfied: sniffio&gt;=1.3.0 in /usr/local/lib/python3.10/dist-packages (from trio~=0.17-&gt;selenium) (1.3.1)
+Requirement already satisfied: exceptiongroup in /usr/local/lib/python3.10/dist-packages (from trio~=0.17-&gt;selenium) (1.2.2)
+Requirement already satisfied: wsproto&gt;=0.14 in /usr/local/lib/python3.10/dist-packages (from trio-websocket~=0.9-&gt;selenium) (1.2.0)
+Requirement already satisfied: pysocks!=1.5.7,&lt;2.0,&gt;=1.5.6 in /usr/local/lib/python3.10/dist-packages (from urllib3[socks]&lt;3,&gt;=1.26-&gt;selenium) (1.7.1)
+Requirement already satisfied: h11&lt;1,&gt;=0.9.0 in /usr/local/lib/python3.10/dist-packages (from wsproto&gt;=0.14-&gt;trio-websocket~=0.9-&gt;selenium) (0.14.0)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
 <span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>
 <span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
@@ -460,7 +462,7 @@ Requirement already satisfied: h11&lt;1,&gt;=0.9.0 in c:\users\zarif\appdata\loc
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">web_driver</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">web_driver</span><span class="p">():</span>
     <span class="n">options</span> <span class="o">=</span> <span class="n">Options</span><span class="p">()</span>
     <span class="n">options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--headless&#39;</span><span class="p">)</span>
     <span class="n">options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--no-sandbox&#39;</span><span class="p">)</span>
@@ -474,7 +476,7 @@ Requirement already satisfied: h11&lt;1,&gt;=0.9.0 in c:\users\zarif\appdata\loc
 <p>Fungsi web_driver ini menyiapkan browser Chrome untuk berjalan di latar belakang tanpa tampilan grafis, serta mengatasi beberapa potensi masalah yang mungkin muncul pada sistem atau penggunaan memori. Dengan fungsi ini, kamu bisa menjalankan browser Chrome secara otomatis untuk keperluan seperti web scraping atau otomatisasi, tanpa perlu melihat tampilan browser di layar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_element_text</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="n">xpath</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_element_text</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="n">xpath</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
             <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="n">xpath</span><span class="p">))</span>
@@ -489,7 +491,7 @@ Requirement already satisfied: h11&lt;1,&gt;=0.9.0 in c:\users\zarif\appdata\loc
 <p>Mencari elemen di halaman web berdasarkan XPath, dan jika elemen ditemukan, teksnya akan diambil. Jika terjadi kesalahan, fungsi ini akan menangani kesalahan tersebut dengan mencetak pesan dan mengembalikan string kosong.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">extract_article_content</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="n">article_url</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">extract_article_content</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="n">article_url</span><span class="p">):</span>
     <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">article_url</span><span class="p">)</span>
     <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
         <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s1">&#39;//h1&#39;</span><span class="p">))</span>
@@ -513,7 +515,7 @@ Requirement already satisfied: h11&lt;1,&gt;=0.9.0 in c:\users\zarif\appdata\loc
 <p>Membuka halaman Berita, menunggu elemen-elemen penting muncul, dan mengambil teks dari judul, tanggal, dan konten isi, kemudian mengembalikannya dalam format dictionary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">extract_category_data</span><span class="p">(</span><span class="n">driver</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">extract_category_data</span><span class="p">(</span><span class="n">driver</span><span class="p">):</span>
     <span class="n">articles</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s1">&#39;//div[@class=&quot;item&quot;]&#39;</span><span class="p">)</span>
     <span class="n">article_urls</span> <span class="o">=</span> <span class="p">[</span><span class="n">article</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s1">&#39;.//a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">article</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">article_urls</span>
@@ -564,9 +566,7 @@ Requirement already satisfied: h11&lt;1,&gt;=0.9.0 in c:\users\zarif\appdata\loc
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scraping category: Ekonomi
-</pre></div>
-</div>
-
+Scraping category: Olahraga
 </pre></div>
 </div>
 </div>
@@ -574,7 +574,7 @@ Requirement already satisfied: h11&lt;1,&gt;=0.9.0 in c:\users\zarif\appdata\loc
 <p>Mengakses beberapa halaman kategori berita, mengambil URL berita dari setiap halaman, dan kemudian mengambil konten dari berita-berita tersebut, sambil memastikan untuk tidak melebihi jumlah berita maksimal</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;hasil_crawling.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -582,7 +582,7 @@ Requirement already satisfied: h11&lt;1,&gt;=0.9.0 in c:\users\zarif\appdata\loc
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
