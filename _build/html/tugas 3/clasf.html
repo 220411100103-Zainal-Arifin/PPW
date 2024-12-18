@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 2 : Implementasi hasil VSM dengan algoritma Logistic Regression &#8212; PPW</title>
+    <title>Tugas 3.2 : Implementasi hasil VSM dengan algoritma Logistic Regression &#8212; PPW</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,6 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas 3/clasf';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tugas 4 : Graph &amp; Centrality" href="../tugas%204/Graph.html" />
+    <link rel="prev" title="TUGAS 3.1 Implementasi Logistic Regression" href="train.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,14 +179,19 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../220411100103_Zainal_Arifin_Tugas1.html">PPW Crawling Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tugas2/tugas2.html"><strong>PPW Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tugas2/vsm.html"><strong>Tugas 2 : Membuat VSM dengan isi TF-IDF berdasarkan hasil Crawling Berita Online</strong></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="train.html">Logistic Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tugas%205/Tugas_6%28Summary_centrality%29.html">Tugas 6 <strong>Summary Dokumen</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tugas%206/Tugas_7%28Keyword_Extraction%29.html">Tugas 7 <strong>Keyword Extraction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.html"><strong>TUGAS 3.1 Implementasi Logistic Regression</strong></a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 3.2 : Implementasi hasil VSM dengan algoritma Logistic Regression</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tugas%204/Graph.html"><strong>Tugas 4 : Graph &amp; Centrality</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tugas%205/summary.html">Tugas 5 <strong>Summary Dokumen</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tugas%206/Keyword_Extraction.html">Tugas 6 <strong>Keyword Extraction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calssf%20dengan%20svd/vsm_dengan_reduksi.html"><strong>TUGAS 7.1 Implementasi Logistic Regression Dengan SVD</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../svd%20bertahap/pengurangan_dimensi_bertahap.html"><strong>Klasifikasi Dengan Pengurangan Dimensi Secara Bertahap</strong></a></li>
 </ul>
 
     </div>
@@ -372,7 +377,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 2 : Implementasi hasil VSM dengan algoritma Logistic Regression</h1>
+    <h1>Tugas 3.2 : Implementasi hasil VSM dengan algoritma Logistic Regression</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -395,13 +400,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-2-implementasi-hasil-vsm-dengan-algoritma-logistic-regression">
-<h1><strong>Tugas 2 : Implementasi hasil VSM dengan algoritma Logistic Regression</strong><a class="headerlink" href="#tugas-2-implementasi-hasil-vsm-dengan-algoritma-logistic-regression" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-3-2-implementasi-hasil-vsm-dengan-algoritma-logistic-regression">
+<h1><strong>Tugas 3.2 : Implementasi hasil VSM dengan algoritma Logistic Regression</strong><a class="headerlink" href="#tugas-3-2-implementasi-hasil-vsm-dengan-algoritma-logistic-regression" title="Link to this heading">#</a></h1>
 <p>Dibuat Oleh:</p>
 <ul class="simple">
 <li><p>Nama : Zainal Arifin</p></li>
 <li><p>NIM : 220411100103</p></li>
 <li><p>Kelas : PPW A</p></li>
+<li><p>Link App : <a class="reference external" href="https://huggingface.co/spaces/leinna/clasf_doc">https://huggingface.co/spaces/leinna/clasf_doc</a></p></li>
 </ul>
 <section id="persiapan-library">
 <h2><strong>Persiapan Library</strong><a class="headerlink" href="#persiapan-library" title="Link to this heading">#</a></h2>
@@ -4011,6 +4017,24 @@ Successfully installed h11-0.14.0 outcome-1.3.0.post0 selenium-4.25.0 trio-0.26.
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="train.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>TUGAS 3.1 Implementasi Logistic Regression</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../tugas%204/Graph.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Tugas 4 : Graph &amp; Centrality</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               

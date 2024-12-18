@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; PPW</title>
+    <title>Tugas 6 Keyword Extraction &#8212; PPW</title>
   
   
   
@@ -57,9 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'summary document/summary_document';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas 6/Keyword_Extraction';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TUGAS 7.1 Implementasi Logistic Regression Dengan SVD" href="../calssf%20dengan%20svd/vsm_dengan_reduksi.html" />
+    <link rel="prev" title="Tugas 5 Summary Dokumen" href="../tugas%205/summary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,7 +179,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../220411100103_Zainal_Arifin_Tugas1.html">PPW Crawling Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tugas2/tugas2.html"><strong>PPW Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tugas2/vsm.html"><strong>Tugas 2 : Membuat VSM dengan isi TF-IDF berdasarkan hasil Crawling Berita Online</strong></a></li>
@@ -189,7 +189,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tugas%203/clasf.html"><strong>Tugas 3.2 : Implementasi hasil VSM dengan algoritma Logistic Regression</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tugas%204/Graph.html"><strong>Tugas 4 : Graph &amp; Centrality</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tugas%205/summary.html">Tugas 5 <strong>Summary Dokumen</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tugas%206/Keyword_Extraction.html">Tugas 6 <strong>Keyword Extraction</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 6 <strong>Keyword Extraction</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../calssf%20dengan%20svd/vsm_dengan_reduksi.html"><strong>TUGAS 7.1 Implementasi Logistic Regression Dengan SVD</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../svd%20bertahap/pengurangan_dimensi_bertahap.html"><strong>Klasifikasi Dengan Pengurangan Dimensi Secara Bertahap</strong></a></li>
 </ul>
@@ -263,7 +263,7 @@
       
       
       
-      <li><a href="https://github.com/220411100103-Zainal-Arifin/PPW/issues/new?title=Issue%20on%20page%20%2Fsummary document/summary_document.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/220411100103-Zainal-Arifin/PPW/issues/new?title=Issue%20on%20page%20%2FTugas 6/Keyword_Extraction.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +293,7 @@
       
       
       
-      <li><a href="../_sources/summary document/summary_document.ipynb" target="_blank"
+      <li><a href="../_sources/Tugas 6/Keyword_Extraction.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -377,7 +377,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Tugas 6 Keyword Extraction</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -386,9 +386,15 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-library"><strong>Install Library</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-artikel-berita">Crawling Data Artikel Berita</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">PREPROCESSING</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuatan-dataframe"><strong>Pembuatan Dataframe</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapan-kalimat-dan-kata">Persiapan Kalimat dan Kata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-ke-dataframe">Implementasi ke Dataframe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keyword-extraction">Keyword Extraction</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -399,7 +405,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-6-keyword-extraction">
+<h1>Tugas 6 <strong>Keyword Extraction</strong><a class="headerlink" href="#tugas-6-keyword-extraction" title="Link to this heading">#</a></h1>
+<p>Nama : Zainal Arifin</p>
+<p>NIM  : 220411100103</p>
+<section id="install-library">
+<h2><strong>Install Library</strong><a class="headerlink" href="#install-library" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">selenium</span>
 <span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">networkx</span>
@@ -413,18 +425,17 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting selenium
-  Downloading selenium-4.26.1-py3-none-any.whl.metadata (7.1 kB)
+  Downloading selenium-4.25.0-py3-none-any.whl.metadata (7.1 kB)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.26 in /usr/local/lib/python3.10/dist-packages (from urllib3[socks]&lt;3,&gt;=1.26-&gt;selenium) (2.2.3)
 Collecting trio~=0.17 (from selenium)
-  Downloading trio-0.27.0-py3-none-any.whl.metadata (8.6 kB)
+  Downloading trio-0.26.2-py3-none-any.whl.metadata (8.6 kB)
 Collecting trio-websocket~=0.9 (from selenium)
   Downloading trio_websocket-0.11.1-py3-none-any.whl.metadata (4.7 kB)
 Requirement already satisfied: certifi&gt;=2021.10.8 in /usr/local/lib/python3.10/dist-packages (from selenium) (2024.8.30)
 Requirement already satisfied: typing_extensions~=4.9 in /usr/local/lib/python3.10/dist-packages (from selenium) (4.12.2)
 Requirement already satisfied: websocket-client~=1.8 in /usr/local/lib/python3.10/dist-packages (from selenium) (1.8.0)
 Requirement already satisfied: attrs&gt;=23.2.0 in /usr/local/lib/python3.10/dist-packages (from trio~=0.17-&gt;selenium) (24.2.0)
-Collecting sortedcontainers (from trio~=0.17-&gt;selenium)
-  Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: sortedcontainers in /usr/local/lib/python3.10/dist-packages (from trio~=0.17-&gt;selenium) (2.4.0)
 Requirement already satisfied: idna in /usr/local/lib/python3.10/dist-packages (from trio~=0.17-&gt;selenium) (3.10)
 Collecting outcome (from trio~=0.17-&gt;selenium)
   Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
@@ -433,35 +444,43 @@ Requirement already satisfied: exceptiongroup in /usr/local/lib/python3.10/dist-
 Collecting wsproto&gt;=0.14 (from trio-websocket~=0.9-&gt;selenium)
   Downloading wsproto-1.2.0-py3-none-any.whl.metadata (5.6 kB)
 Requirement already satisfied: pysocks!=1.5.7,&lt;2.0,&gt;=1.5.6 in /usr/local/lib/python3.10/dist-packages (from urllib3[socks]&lt;3,&gt;=1.26-&gt;selenium) (1.7.1)
-Requirement already satisfied: h11&lt;1,&gt;=0.9.0 in /usr/local/lib/python3.10/dist-packages (from wsproto&gt;=0.14-&gt;trio-websocket~=0.9-&gt;selenium) (0.14.0)
-Downloading selenium-4.26.1-py3-none-any.whl (9.7 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">9.7/9.7 MB</span> <span class=" -Color -Color-Red">27.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hDownloading trio-0.27.0-py3-none-any.whl (481 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">481.7/481.7 kB</span> <span class=" -Color -Color-Red">11.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+Collecting h11&lt;1,&gt;=0.9.0 (from wsproto&gt;=0.14-&gt;trio-websocket~=0.9-&gt;selenium)
+  Downloading h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Downloading selenium-4.25.0-py3-none-any.whl (9.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">9.7/9.7 MB</span> <span class=" -Color -Color-Red">28.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading trio-0.26.2-py3-none-any.whl (475 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">476.0/476.0 kB</span> <span class=" -Color -Color-Red">22.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hDownloading trio_websocket-0.11.1-py3-none-any.whl (17 kB)
 Downloading wsproto-1.2.0-py3-none-any.whl (24 kB)
 Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
-Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
-Installing collected packages: sortedcontainers, wsproto, outcome, trio, trio-websocket, selenium
-Successfully installed outcome-1.3.0.post0 selenium-4.26.1 sortedcontainers-2.4.0 trio-0.27.0 trio-websocket-0.11.1 wsproto-1.2.0
-Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (3.4.2)
-Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (3.8.0)
+Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">58.3/58.3 kB</span> <span class=" -Color -Color-Red">3.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: outcome, h11, wsproto, trio, trio-websocket, selenium
+Successfully installed h11-0.14.0 outcome-1.3.0.post0 selenium-4.25.0 trio-0.26.2 trio-websocket-0.11.1 wsproto-1.2.0
+Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (3.4)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (3.7.1)
 Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.3.0)
 Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (0.12.1)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (4.54.1)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.4.7)
-Requirement already satisfied: numpy&lt;2,&gt;=1.21 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.26.4)
+Requirement already satisfied: numpy&gt;=1.20 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.26.4)
 Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (24.1)
 Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (10.4.0)
-Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (3.2.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (3.1.4)
 Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (2.8.2)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
 Requirement already satisfied: nltk in /usr/local/lib/python3.10/dist-packages (3.8.1)
 Requirement already satisfied: click in /usr/local/lib/python3.10/dist-packages (from nltk) (8.1.7)
 Requirement already satisfied: joblib in /usr/local/lib/python3.10/dist-packages (from nltk) (1.4.2)
 Requirement already satisfied: regex&gt;=2021.8.3 in /usr/local/lib/python3.10/dist-packages (from nltk) (2024.9.11)
-Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from nltk) (4.66.6)
-Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (4.66.6)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from nltk) (4.66.5)
+Collecting Sastrawi
+  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl.metadata (909 bytes)
+Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">11.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: Sastrawi
+Successfully installed Sastrawi-1.0.1
+Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (4.66.5)
 Requirement already satisfied: pandas in /usr/local/lib/python3.10/dist-packages (2.2.2)
 Requirement already satisfied: numpy&gt;=1.22.4 in /usr/local/lib/python3.10/dist-packages (from pandas) (1.26.4)
 Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas) (2.8.2)
@@ -502,10 +521,10 @@ Collecting sklearn
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;wordnet&#39;</span><span class="p">)</span>
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
 <span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span> <span class="p">,</span> <span class="n">word_tokenize</span>
 <span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
-<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
-<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
 <span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
 <span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>
@@ -526,6 +545,10 @@ Collecting sklearn
 </div>
 </div>
 </div>
+</section>
+<section id="crawling-data-artikel-berita">
+<h2>Crawling Data Artikel Berita<a class="headerlink" href="#crawling-data-artikel-berita" title="Link to this heading">#</a></h2>
+<p>melakukan crawling untuk mengambil judul, isi, tanggal, dan kategori artikel dari URL yang diberikan, dan menyajikan data tersebut dalam bentuk DataFrame untuk kemudahan analisis lebih lanjut.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">web_driver</span><span class="p">():</span>
@@ -585,11 +608,14 @@ Collecting sklearn
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Masukkan URL artikel: https://www.metrotvnews.com/play/bJECam3B-timnas-indonesia-kumpul-di-jakarta-pada-10-november
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Masukkan URL artikel: https://www.metrotvnews.com/read/kpLCWVx8-menpora-buka-kasad-6th-asian-taekwondo-open-championship-2024
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="preprocessing">
+<h2>PREPROCESSING<a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fungsi untuk mengubah teks menjadi huruf kecil</span>
@@ -644,40 +670,75 @@ Collecting sklearn
 </div>
 </div>
 </div>
+<ol class="arabic simple">
+<li><p>Mengubah teks menjadi huruf kecil
+Fungsi clean_lower() mengubah semua huruf dalam teks menjadi huruf kecil menggunakan .lower(). Ini diterapkan pada kolom Content untuk menghasilkan kolom baru lower case.</p></li>
+<li><p>Membersihkan tanda baca dan angka
+Fungsi clean_punct() membersihkan teks dari angka, tanda baca, dan karakter non-huruf menggunakan regex. Hasilnya disimpan di kolom tanda baca.</p></li>
+<li><p>Normalisasi spasi
+Fungsi _normalize_whitespace() digunakan untuk menghapus spasi berlebihan di antara kata-kata dan di ujung teks. Hasilnya disimpan di kolom spasi.</p></li>
+<li><p>Tokenisasi
+Fungsi tokenize_text() memecah teks menjadi daftar kata-kata (token) menggunakan word_tokenize() dari library NLTK. Hasilnya disimpan di kolom token.</p></li>
+<li><p>Menghapus stopwords
+Fungsi clean_stopwords() menghapus kata-kata umum (stopwords) dalam bahasa Indonesia yang tidak relevan untuk analisis menggunakan daftar stopwords dari NLTK. Hasilnya disimpan di kolom stopwords.</p></li>
+<li><p>Menggabungkan kembali token menjadi string
+Setelah pembersihan stopwords, token yang tersisa digabungkan kembali menjadi teks utuh menggunakan ‘ ‘.join(tokens). Hasil akhirnya disimpan di kolom processed_text.</p></li>
+</ol>
+</section>
+<section id="pembuatan-dataframe">
+<h2><strong>Pembuatan Dataframe</strong><a class="headerlink" href="#pembuatan-dataframe" title="Link to this heading">#</a></h2>
+</section>
+<section id="persiapan-kalimat-dan-kata">
+<h2>Persiapan Kalimat dan Kata<a class="headerlink" href="#persiapan-kalimat-dan-kata" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">prep_result</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;processed_text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">prep_result</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat kumpulan kalimat</span>
+<span class="n">sentences</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;processed_text&#39;</span><span class="p">]:</span>
+  <span class="n">sentences</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+
+<span class="c1"># Membuat kumpulan kata unik</span>
+<span class="n">vocabulary</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">:</span>
+  <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+    <span class="n">vocabulary</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vocabulary</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0: &#39;sekjen persatuan sepak bola indonesia pssi yunus nusi mengungkap pemain timnas indonesia berkumpul november . menghadapi jepang november . insyaallah tanggal november anak anak gabung jakarta semoga sehat bugar persiapan pertandingan jepang tanggal yunus nusi tayangan metro siang metro tv selasa november . yunus persiapan diserahkan sepenuhnya pelatih shin tae yong sty . bertanggung melayani pemain akomodasi pesawat makanan kelengkapan pemain . arahan ketua anak anak pelatih ofisial layani maksimal erick thohir berharap lalai melayani anak anak perjuangan anak anak berat jepang . standny maksimal melayani timnas .&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;tangerang menteri pemuda olahraga republik indonesia menpora ri dito ariotedjo resmi membuka kejuaraan taekwondo tingkat asia bertajuk kasad th asian taekwondo open championship sport center indoor tangerang banten selasa siang .&#39;, &#39;tama kemenpora mengapresiasi ketua pb ti keras menggelar kejuaraan tingkat asia diadakan .&#39;, &#39;negara berpartisipasi menpora dito membuka kejuaraan .&#39;, &#39;menpora dito menilai cabor taekwondo memiliki peran membentuk karakter pemuda bangsa .&#39;, &#39;indonesia menpora dito taekwondo berkembang pesat ribu pegiat berprestasi tingkat internasional .&#39;, &#39;taekwondo memiliki peran membentuk generasi muda tangguh disiplin berjiwa advertisement cabor taekwondo asian games cina menyumbangkan medali emas perunggu .&#39;, &#39;tingkat negeri taekwondo berkembang pesat .&#39;, &#39;ribu praktisi taekwondo dilatih ribu pelatih berlisensi mengantarkan generasi muda prestasi tingkat regional global urainya .&#39;, &#39;selamat bertanding atlet tunjukkan semangat dedikasi sportivitas semoga kejuaraan inspirasi prestasi pungkas menpora dito didampingi deputi peningkatan prestasi olahraga surono .&#39;, &#39;kejuaraan kasad th asian taekwondo open championship kejuaraan internasional diselenggarakan pbti .&#39;, &#39;diikuti atlet negara asia .&#39;, &#39;kebanggaan indonesia menggelar kejuaraan internasional taekwondo .&#39;, &#39;ajang mempertemukan atlet taekwondo terbaik asia rangka hut tni ketua pb ti richard tampubolon .&#39;, &#39;kejuaraan kompetisi ranking dunia g berpengaruh peringkat atlet dunia imbuhnya acara dihadiri ketua noc indonesia raja sapta oktohari sekjen koni pusat ade lukman presiden atu kyu seok lee .&#39;, &#39;negara peserta kejuaraan kasad th asian taekwondo open championship brunei darussalam haiti hongkong india jepang kazakhstan korea libanon makau malaysia nepal pakistan philipina rwanda singapura tajikistan timor leste usbekistan yaman atlet individual netral indonesia .&#39;]
+{&#39;diadakan&#39;, &#39;timor&#39;, &#39;brunei&#39;, &#39;berpartisipasi&#39;, &#39;republik&#39;, &#39;center&#39;, &#39;advertisement&#39;, &#39;noc&#39;, &#39;hongkong&#39;, &#39;internasional&#39;, &#39;singapura&#39;, &#39;regional&#39;, &#39;mempertemukan&#39;, &#39;rwanda&#39;, &#39;open&#39;, &#39;kazakhstan&#39;, &#39;banten&#39;, &#39;berpengaruh&#39;, &#39;disiplin&#39;, &#39;peringkat&#39;, &#39;menyumbangkan&#39;, &#39;haiti&#39;, &#39;pbti&#39;, &#39;bangsa&#39;, &#39;deputi&#39;, &#39;keras&#39;, &#39;mengantarkan&#39;, &#39;.&#39;, &#39;pb&#39;, &#39;berprestasi&#39;, &#39;makau&#39;, &#39;terbaik&#39;, &#39;malaysia&#39;, &#39;yaman&#39;, &#39;tingkat&#39;, &#39;raja&#39;, &#39;tajikistan&#39;, &#39;oktohari&#39;, &#39;peserta&#39;, &#39;usbekistan&#39;, &#39;libanon&#39;, &#39;sportivitas&#39;, &#39;olahraga&#39;, &#39;presiden&#39;, &#39;lukman&#39;, &#39;dihadiri&#39;, &#39;ri&#39;, &#39;tunjukkan&#39;, &#39;ajang&#39;, &#39;berkembang&#39;, &#39;leste&#39;, &#39;membuka&#39;, &#39;resmi&#39;, &#39;dito&#39;, &#39;pemuda&#39;, &#39;kasad&#39;, &#39;perunggu&#39;, &#39;kemenpora&#39;, &#39;dunia&#39;, &#39;asia&#39;, &#39;tangguh&#39;, &#39;inspirasi&#39;, &#39;cina&#39;, &#39;negara&#39;, &#39;taekwondo&#39;, &#39;jepang&#39;, &#39;philipina&#39;, &#39;acara&#39;, &#39;berjiwa&#39;, &#39;emas&#39;, &#39;kebanggaan&#39;, &#39;kompetisi&#39;, &#39;memiliki&#39;, &#39;selamat&#39;, &#39;menilai&#39;, &#39;siang&#39;, &#39;negeri&#39;, &#39;tampubolon&#39;, &#39;karakter&#39;, &#39;pakistan&#39;, &#39;ketua&#39;, &#39;didampingi&#39;, &#39;koni&#39;, &#39;generasi&#39;, &#39;urainya&#39;, &#39;pegiat&#39;, &#39;sekjen&#39;, &#39;muda&#39;, &#39;india&#39;, &#39;sport&#39;, &#39;surono&#39;, &#39;richard&#39;, &#39;dilatih&#39;, &#39;menggelar&#39;, &#39;cabor&#39;, &#39;ariotedjo&#39;, &#39;berlisensi&#39;, &#39;prestasi&#39;, &#39;asian&#39;, &#39;kejuaraan&#39;, &#39;menteri&#39;, &#39;ti&#39;, &#39;kyu&#39;, &#39;diselenggarakan&#39;, &#39;atlet&#39;, &#39;tangerang&#39;, &#39;diikuti&#39;, &#39;pelatih&#39;, &#39;pusat&#39;, &#39;seok&#39;, &#39;hut&#39;, &#39;pungkas&#39;, &#39;rangka&#39;, &#39;atu&#39;, &#39;semoga&#39;, &#39;imbuhnya&#39;, &#39;lee&#39;, &#39;semangat&#39;, &#39;ranking&#39;, &#39;championship&#39;, &#39;peran&#39;, &#39;individual&#39;, &#39;pesat&#39;, &#39;indoor&#39;, &#39;bertajuk&#39;, &#39;mengapresiasi&#39;, &#39;th&#39;, &#39;g&#39;, &#39;indonesia&#39;, &#39;ade&#39;, &#39;membentuk&#39;, &#39;games&#39;, &#39;darussalam&#39;, &#39;tama&#39;, &#39;tni&#39;, &#39;menpora&#39;, &#39;praktisi&#39;, &#39;peningkatan&#39;, &#39;selasa&#39;, &#39;dedikasi&#39;, &#39;bertanding&#39;, &#39;ribu&#39;, &#39;sapta&#39;, &#39;global&#39;, &#39;nepal&#39;, &#39;korea&#39;, &#39;netral&#39;, &#39;medali&#39;}
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="implementasi-ke-dataframe">
+<h2>Implementasi ke Dataframe<a class="headerlink" href="#implementasi-ke-dataframe" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">kalimat_preprocessing</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">prep_result</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">kalimat</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Content&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
-<span class="n">tfidf_preprocessing</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">kalimat_preprocessing</span><span class="p">)</span>
-<span class="n">terms</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
-<span class="n">tfidf_preprocessing</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tfidf_preprocessing</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">terms</span><span class="p">)</span>
-<span class="n">tfidf_preprocessing</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;future.no_silent_downcasting&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">vocabulary</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">sentences</span><span class="p">)</span>
+
+<span class="c1"># Mengisi nilai kosong dengan 0</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Fill with 0s</span>
+
+<span class="c1"># Menghitung nilai setiap kata pada kalimat</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sentences</span><span class="p">):</span>
+  <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sentence</span><span class="p">,</span> <span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># Melihat isi Dataframe</span>
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-bed77f0d-bbcf-4682-b1ff-6483e00c8580" class="colab-df-container">
+  <div id="df-f0b22ba5-fce8-4566-b2a1-fe85961a09dd" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -696,206 +757,398 @@ Collecting sklearn
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>akomodasi</th>
-      <th>anak</th>
-      <th>arahan</th>
-      <th>berat</th>
-      <th>berharap</th>
-      <th>berkumpul</th>
-      <th>bertanggung</th>
-      <th>bola</th>
-      <th>bugar</th>
-      <th>diserahkan</th>
+      <th>diadakan</th>
+      <th>timor</th>
+      <th>brunei</th>
+      <th>berpartisipasi</th>
+      <th>republik</th>
+      <th>center</th>
+      <th>advertisement</th>
+      <th>noc</th>
+      <th>hongkong</th>
+      <th>internasional</th>
       <th>...</th>
-      <th>standny</th>
-      <th>sty</th>
-      <th>tae</th>
-      <th>tanggal</th>
-      <th>tayangan</th>
-      <th>thohir</th>
-      <th>timnas</th>
-      <th>tv</th>
-      <th>yong</th>
-      <th>yunus</th>
+      <th>selasa</th>
+      <th>dedikasi</th>
+      <th>bertanding</th>
+      <th>ribu</th>
+      <th>sapta</th>
+      <th>global</th>
+      <th>nepal</th>
+      <th>korea</th>
+      <th>netral</th>
+      <th>medali</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.266558</td>
-      <td>0.000000</td>
-      <td>0.266558</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <th>tangerang menteri pemuda olahraga republik indonesia menpora ri dito ariotedjo resmi membuka kejuaraan taekwondo tingkat asia bertajuk kasad th asian taekwondo open championship sport center indoor tangerang banten selasa siang .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>0.0000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.221266</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.189131</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <th>tama kemenpora mengapresiasi ketua pb ti keras menggelar kejuaraan tingkat asia diadakan .</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>0.0000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>0.000000</td>
-      <td>0.324621</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.195535</td>
-      <td>0.000000</td>
+      <th>negara berpartisipasi menpora dito membuka kejuaraan .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>0.0000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.391069</td>
-      <td>0.195535</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.195535</td>
-      <td>0.000000</td>
-      <td>0.138738</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.356201</td>
+      <th>menpora dito menilai cabor taekwondo memiliki peran membentuk karakter pemuda bangsa .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>0.0000</td>
-      <td>0.356201</td>
-      <td>0.356201</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.356201</td>
-      <td>0.252735</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>0.347953</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.347953</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <th>indonesia menpora dito taekwondo berkembang pesat ribu pegiat berprestasi tingkat internasional .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
       <td>...</td>
-      <td>0.0000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>0.000000</td>
-      <td>0.816692</td>
-      <td>0.163977</td>
-      <td>0.163977</td>
-      <td>0.163977</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <th>taekwondo memiliki peran membentuk generasi muda tangguh disiplin berjiwa advertisement cabor taekwondo asian games cina menyumbangkan medali emas perunggu .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>0.0000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.163977</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <th>tingkat negeri taekwondo berkembang pesat .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>0.5891</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.489004</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>ribu praktisi taekwondo dilatih ribu pelatih berlisensi mengantarkan generasi muda prestasi tingkat regional global urainya .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>selamat bertanding atlet tunjukkan semangat dedikasi sportivitas semoga kejuaraan inspirasi prestasi pungkas menpora dito didampingi deputi peningkatan prestasi olahraga surono .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>kejuaraan kasad th asian taekwondo open championship kejuaraan internasional diselenggarakan pbti .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>diikuti atlet negara asia .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>kebanggaan indonesia menggelar kejuaraan internasional taekwondo .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>ajang mempertemukan atlet taekwondo terbaik asia rangka hut tni ketua pb ti richard tampubolon .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>kejuaraan kompetisi ranking dunia g berpengaruh peringkat atlet dunia imbuhnya acara dihadiri ketua noc indonesia raja sapta oktohari sekjen koni pusat ade lukman presiden atu kyu seok lee .</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>negara peserta kejuaraan kasad th asian taekwondo open championship brunei darussalam haiti hongkong india jepang kazakhstan korea libanon makau malaysia nepal pakistan philipina rwanda singapura tajikistan timor leste usbekistan yaman atlet individual netral indonesia .</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
-<p>7 rows × 55 columns</p>
+<p>15 rows × 148 columns</p>
 </div>
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-bed77f0d-bbcf-4682-b1ff-6483e00c8580')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f0b22ba5-fce8-4566-b2a1-fe85961a09dd')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -947,12 +1200,12 @@ Collecting sklearn
 
     <script>
       const buttonEl =
-        document.querySelector('#df-bed77f0d-bbcf-4682-b1ff-6483e00c8580 button.colab-df-convert');
+        document.querySelector('#df-f0b22ba5-fce8-4566-b2a1-fe85961a09dd button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-bed77f0d-bbcf-4682-b1ff-6483e00c8580');
+        const element = document.querySelector('#df-f0b22ba5-fce8-4566-b2a1-fe85961a09dd');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -972,8 +1225,8 @@ Collecting sklearn
   </div>
 
 
-<div id="df-8540f4e2-6da1-464f-923b-de506a983038">
-  <button class="colab-df-quickchart" onclick="quickchart('df-8540f4e2-6da1-464f-923b-de506a983038')"
+<div id="df-e7a3c755-ee81-4b71-819e-eb47a543bc7e">
+  <button class="colab-df-quickchart" onclick="quickchart('df-e7a3c755-ee81-4b71-819e-eb47a543bc7e')"
             title="Suggest charts"
             style="display:none;">
 
@@ -1092,14 +1345,14 @@ Collecting sklearn
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-8540f4e2-6da1-464f-923b-de506a983038 button');
+        document.querySelector('#df-e7a3c755-ee81-4b71-819e-eb47a543bc7e button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
 
-  <div id="id_ca22500e-4ba4-489f-9bb0-1ace4dd65b4d">
+  <div id="id_5b588d8b-ceee-4238-a948-64a1995d158a">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -1131,7 +1384,7 @@ Collecting sklearn
         fill: #FFFFFF;
       }
     </style>
-    <button class="colab-df-generate" onclick="generateWithVariable('tfidf_preprocessing')"
+    <button class="colab-df-generate" onclick="generateWithVariable('df')"
             title="Generate code using this dataframe."
             style="display:none;">
 
@@ -1143,12 +1396,12 @@ Collecting sklearn
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_ca22500e-4ba4-489f-9bb0-1ace4dd65b4d button.colab-df-generate');
+        document.querySelector('#id_5b588d8b-ceee-4238-a948-64a1995d158a button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       buttonEl.onclick = () => {
-        google.colab.notebook.generateWithVariable('tfidf_preprocessing');
+        google.colab.notebook.generateWithVariable('df');
       }
       })();
     </script>
@@ -1158,488 +1411,36 @@ Collecting sklearn
   </div>
 </div></div>
 </div>
+</section>
+<section id="keyword-extraction">
+<h2>Keyword Extraction<a class="headerlink" href="#keyword-extraction" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cossim_prep</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">tfidf_preprocessing</span><span class="p">,</span> <span class="n">tfidf_preprocessing</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung jumlah kemunculan pada tiap kata</span>
+<span class="n">word_frequencies</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="n">similarity_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cossim_prep</span><span class="p">,</span>
-								 <span class="n">index</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">kalimat_preprocessing</span><span class="p">)),</span>
-								 <span class="n">columns</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">kalimat_preprocessing</span><span class="p">)))</span>
+<span class="c1"># Mengurutkan berdasarkan jumlah kemunculan kata</span>
+<span class="n">sorted_word_frequencies</span> <span class="o">=</span> <span class="n">word_frequencies</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-<span class="n">similarity_matrix</span>
+<span class="c1"># Menampilkan kata teratas</span>
+<span class="n">keyword</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">freq</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sorted_word_frequencies</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">keyword</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rank </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2"> (Frequency: </span><span class="si">{</span><span class="n">freq</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-78556193-2e73-4226-9d2a-423bb83b5751" class="colab-df-container">
-    <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.000000</td>
-      <td>0.094727</td>
-      <td>0.114632</td>
-      <td>0.047800</td>
-      <td>0.127817</td>
-      <td>0.000000</td>
-      <td>0.108200</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.094727</td>
-      <td>1.000000</td>
-      <td>0.208462</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.058273</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.114632</td>
-      <td>0.208462</td>
-      <td>1.000000</td>
-      <td>0.083055</td>
-      <td>0.000000</td>
-      <td>0.281257</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.047800</td>
-      <td>0.000000</td>
-      <td>0.083055</td>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>0.040246</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.127817</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>0.028724</td>
-      <td>0.103193</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0.000000</td>
-      <td>0.058273</td>
-      <td>0.281257</td>
-      <td>0.040246</td>
-      <td>0.028724</td>
-      <td>1.000000</td>
-      <td>0.115192</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0.108200</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.103193</td>
-      <td>0.115192</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-    <div class="colab-df-buttons">
-
-  <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-78556193-2e73-4226-9d2a-423bb83b5751')"
-            title="Convert this dataframe to an interactive table."
-            style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
-    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
-  </svg>
-    </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    .colab-df-buttons div {
-      margin-bottom: 4px;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-    <script>
-      const buttonEl =
-        document.querySelector('#df-78556193-2e73-4226-9d2a-423bb83b5751 button.colab-df-convert');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      async function convertToInteractive(key) {
-        const element = document.querySelector('#df-78556193-2e73-4226-9d2a-423bb83b5751');
-        const dataTable =
-          await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                    [key], {});
-        if (!dataTable) return;
-
-        const docLinkHtml = 'Like what you see? Visit the ' +
-          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-          + ' to learn more about interactive tables.';
-        element.innerHTML = '';
-        dataTable['output_type'] = 'display_data';
-        await google.colab.output.renderOutput(dataTable, element);
-        const docLink = document.createElement('div');
-        docLink.innerHTML = docLinkHtml;
-        element.appendChild(docLink);
-      }
-    </script>
-  </div>
-
-
-<div id="df-41325976-0360-4229-a35d-3be5de65d912">
-  <button class="colab-df-quickchart" onclick="quickchart('df-41325976-0360-4229-a35d-3be5de65d912')"
-            title="Suggest charts"
-            style="display:none;">
-
-<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-     width="24px">
-    <g>
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-    </g>
-</svg>
-  </button>
-
-<style>
-  .colab-df-quickchart {
-      --bg-color: #E8F0FE;
-      --fill-color: #1967D2;
-      --hover-bg-color: #E2EBFA;
-      --hover-fill-color: #174EA6;
-      --disabled-fill-color: #AAA;
-      --disabled-bg-color: #DDD;
-  }
-
-  [theme=dark] .colab-df-quickchart {
-      --bg-color: #3B4455;
-      --fill-color: #D2E3FC;
-      --hover-bg-color: #434B5C;
-      --hover-fill-color: #FFFFFF;
-      --disabled-bg-color: #3B4455;
-      --disabled-fill-color: #666;
-  }
-
-  .colab-df-quickchart {
-    background-color: var(--bg-color);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    fill: var(--fill-color);
-    height: 32px;
-    padding: 0;
-    width: 32px;
-  }
-
-  .colab-df-quickchart:hover {
-    background-color: var(--hover-bg-color);
-    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-    fill: var(--button-hover-fill-color);
-  }
-
-  .colab-df-quickchart-complete:disabled,
-  .colab-df-quickchart-complete:disabled:hover {
-    background-color: var(--disabled-bg-color);
-    fill: var(--disabled-fill-color);
-    box-shadow: none;
-  }
-
-  .colab-df-spinner {
-    border: 2px solid var(--fill-color);
-    border-color: transparent;
-    border-bottom-color: var(--fill-color);
-    animation:
-      spin 1s steps(1) infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-      border-left-color: var(--fill-color);
-    }
-    20% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    30% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-      border-right-color: var(--fill-color);
-    }
-    40% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    60% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-    }
-    80% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-bottom-color: var(--fill-color);
-    }
-    90% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-    }
-  }
-</style>
-
-  <script>
-    async function quickchart(key) {
-      const quickchartButtonEl =
-        document.querySelector('#' + key + ' button');
-      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
-      quickchartButtonEl.classList.add('colab-df-spinner');
-      try {
-        const charts = await google.colab.kernel.invokeFunction(
-            'suggestCharts', [key], {});
-      } catch (error) {
-        console.error('Error during call to suggestCharts:', error);
-      }
-      quickchartButtonEl.classList.remove('colab-df-spinner');
-      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
-    }
-    (() => {
-      let quickchartButtonEl =
-        document.querySelector('#df-41325976-0360-4229-a35d-3be5de65d912 button');
-      quickchartButtonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-    })();
-  </script>
-</div>
-
-  <div id="id_4105ec60-29d3-47ea-b9f6-c47ab045e477">
-    <style>
-      .colab-df-generate {
-        background-color: #E8F0FE;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        display: none;
-        fill: #1967D2;
-        height: 32px;
-        padding: 0 0 0 0;
-        width: 32px;
-      }
-
-      .colab-df-generate:hover {
-        background-color: #E2EBFA;
-        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-        fill: #174EA6;
-      }
-
-      [theme=dark] .colab-df-generate {
-        background-color: #3B4455;
-        fill: #D2E3FC;
-      }
-
-      [theme=dark] .colab-df-generate:hover {
-        background-color: #434B5C;
-        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-        fill: #FFFFFF;
-      }
-    </style>
-    <button class="colab-df-generate" onclick="generateWithVariable('similarity_matrix')"
-            title="Generate code using this dataframe."
-            style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
-  </svg>
-    </button>
-    <script>
-      (() => {
-      const buttonEl =
-        document.querySelector('#id_4105ec60-29d3-47ea-b9f6-c47ab045e477 button.colab-df-generate');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      buttonEl.onclick = () => {
-        google.colab.notebook.generateWithVariable('similarity_matrix');
-      }
-      })();
-    </script>
-  </div>
-
-    </div>
-  </div>
-</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rank 1: . (Frequency: 15)
+Rank 2: taekwondo (Frequency: 12)
+Rank 3: kejuaraan (Frequency: 9)
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">G_preprocessing</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cossim_prep</span><span class="p">)):</span>
-    <span class="n">G_preprocessing</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cossim_prep</span><span class="p">)):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cossim_prep</span><span class="p">)):</span>
-        <span class="n">similarity_preprocessing</span> <span class="o">=</span> <span class="n">cossim_prep</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">similarity_preprocessing</span> <span class="o">&gt;</span> <span class="mf">0.1</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">:</span>
-            <span class="n">G_preprocessing</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
-
-<span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G_preprocessing</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G_preprocessing</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">G_preprocessing</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G_preprocessing</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/ac10ba68ab2648884fd310160ee66fc52d722789ceb607eeaf63a0a0c2e1455c.png" src="../_images/ac10ba68ab2648884fd310160ee66fc52d722789ceb607eeaf63a0a0c2e1455c.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">closeness_preprocessing</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">closeness_centrality</span><span class="p">(</span><span class="n">G_preprocessing</span><span class="p">)</span>
-
-<span class="n">sorted_closeness_preprocessing</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">closeness_preprocessing</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Closeness Centrality:&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">closeness</span> <span class="ow">in</span> <span class="n">sorted_closeness_preprocessing</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">closeness</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Closeness Centrality:
-Node 0: 0.5952
-Node 2: 0.5952
-Node 5: 0.5208
-Node 6: 0.5208
-Node 4: 0.4630
-Node 1: 0.3788
-Node 3: 0.0000
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ringkasan_closeness_preprocessing</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tiga Node Tertinggi Closeness Centrality Menggunakan Preprocessing:&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">closeness_preprocessing</span> <span class="ow">in</span> <span class="n">sorted_closeness_preprocessing</span><span class="p">[:</span><span class="mi">3</span><span class="p">]:</span>
-    <span class="n">top_sentence</span> <span class="o">=</span> <span class="n">kalimat</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
-    <span class="n">ringkasan_closeness_preprocessing</span> <span class="o">+=</span> <span class="n">top_sentence</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: Closeness Centrality = </span><span class="si">{</span><span class="n">closeness_preprocessing</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kalimat: </span><span class="si">{</span><span class="n">top_sentence</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiga Node Tertinggi Closeness Centrality Menggunakan Preprocessing:
-Node 0: Closeness Centrality = 0.5952
-Kalimat: Sekjen Persatuan Sepak Bola Seluruh Indonesia (PSSI) Yunus Nusi mengungkap para pemain Timnas Indonesia mulai berkumpul pada 10 November 2024.
-
-Node 2: Closeness Centrality = 0.5952
-Kalimat: &quot;Insyaallah tanggal 10 (November) anak-anak sudah gabung di sini Jakarta dan semoga mereka dalam keadaan sehat, bugar untuk persiapan pertandingan dengan Jepang di tanggal 15 nanti,&quot; kata Yunus Nusi dalam tayangan Metro Siang, Metro TV, Selasa, 5 November 2024.
-
-Node 5: Closeness Centrality = 0.5208
-Kalimat: &quot;Arahan ketua umum, anak-anak dan pelatih ofisial ini kita layani secara maksimal dan tentu Pak Erick Thohir berharap bahwa jangan sampai kita lalai untuk melayani anak-anak ini karena perjuangan anak-anak ini begitu berat, apalagi dengan Jepang.
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat ringkasan sebagai satu paragraf</span>
-<span class="n">ringkasan_closeness_preprocessing</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">kalimat</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">sorted_closeness_preprocessing</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
-
-<span class="c1"># Mencetak ringkasan sebagai satu paragraf</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ringkasan artikel dalam satu paragraf:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ringkasan_closeness_preprocessing</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ringkasan artikel dalam satu paragraf:
-Sekjen Persatuan Sepak Bola Seluruh Indonesia (PSSI) Yunus Nusi mengungkap para pemain Timnas Indonesia mulai berkumpul pada 10 November 2024. &quot;Insyaallah tanggal 10 (November) anak-anak sudah gabung di sini Jakarta dan semoga mereka dalam keadaan sehat, bugar untuk persiapan pertandingan dengan Jepang di tanggal 15 nanti,&quot; kata Yunus Nusi dalam tayangan Metro Siang, Metro TV, Selasa, 5 November 2024. &quot;Arahan ketua umum, anak-anak dan pelatih ofisial ini kita layani secara maksimal dan tentu Pak Erick Thohir berharap bahwa jangan sampai kita lalai untuk melayani anak-anak ini karena perjuangan anak-anak ini begitu berat, apalagi dengan Jepang.
-</pre></div>
-</div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1654,7 +1455,7 @@ Sekjen Persatuan Sepak Bola Seluruh Indonesia (PSSI) Yunus Nusi mengungkap para 
         },
         kernelOptions: {
             name: "python3",
-            path: "./summary document"
+            path: "./Tugas 6"
         },
         predefinedOutput: true
     }
@@ -1671,6 +1472,24 @@ Sekjen Persatuan Sepak Bola Seluruh Indonesia (PSSI) Yunus Nusi mengungkap para 
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../tugas%205/summary.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tugas 5 <strong>Summary Dokumen</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../calssf%20dengan%20svd/vsm_dengan_reduksi.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>TUGAS 7.1 Implementasi Logistic Regression Dengan SVD</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1686,9 +1505,15 @@ Sekjen Persatuan Sepak Bola Seluruh Indonesia (PSSI) Yunus Nusi mengungkap para 
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-library"><strong>Install Library</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-data-artikel-berita">Crawling Data Artikel Berita</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">PREPROCESSING</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuatan-dataframe"><strong>Pembuatan Dataframe</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapan-kalimat-dan-kata">Persiapan Kalimat dan Kata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-ke-dataframe">Implementasi ke Dataframe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keyword-extraction">Keyword Extraction</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

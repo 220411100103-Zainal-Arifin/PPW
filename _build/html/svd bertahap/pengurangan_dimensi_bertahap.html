@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; PPW</title>
+    <title>Klasifikasi Dengan Pengurangan Dimensi Secara Bertahap &#8212; PPW</title>
   
   
   
@@ -60,6 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'svd bertahap/pengurangan_dimensi_bertahap';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="TUGAS 7.1 Implementasi Logistic Regression Dengan SVD" href="../calssf%20dengan%20svd/vsm_dengan_reduksi.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +123,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,15 +178,19 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../220411100103_Zainal_Arifin_Tugas1.html">PPW Crawling Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tugas2/tugas2.html"><strong>PPW Crawling Berita</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tugas2/vsm.html"><strong>Tugas 2 : Membuat VSM dengan isi TF-IDF berdasarkan hasil Crawling Berita Online</strong></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../tugas%203/train.html">Logistic Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tugas%204/Tugas_5%28Centrality_dokumen%29_.html">Tugas 5 <strong>GRAPH</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tugas%205/Tugas_6%28Summary_centrality%29.html">Tugas 6 <strong>Summary Dokumen</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tugas%206/Tugas_7%28Keyword_Extraction%29.html">Tugas 7 <strong>Keyword Extraction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tugas%203/train.html"><strong>TUGAS 3.1 Implementasi Logistic Regression</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../tugas%203/clasf.html"><strong>Tugas 3.2 : Implementasi hasil VSM dengan algoritma Logistic Regression</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tugas%204/Graph.html"><strong>Tugas 4 : Graph &amp; Centrality</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tugas%205/summary.html">Tugas 5 <strong>Summary Dokumen</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tugas%206/Keyword_Extraction.html">Tugas 6 <strong>Keyword Extraction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calssf%20dengan%20svd/vsm_dengan_reduksi.html"><strong>TUGAS 7.1 Implementasi Logistic Regression Dengan SVD</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Klasifikasi Dengan Pengurangan Dimensi Secara Bertahap</strong></a></li>
 </ul>
 
     </div>
@@ -373,7 +376,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Klasifikasi Dengan Pengurangan Dimensi Secara Bertahap</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,9 +385,14 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installasi-library">Installasi Library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-data">Splitting Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuatan-vsm">Pembuatan VSM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-svd-secara-bertahap">Penerapan SVD secara bertahap</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -395,7 +403,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="klasifikasi-dengan-pengurangan-dimensi-secara-bertahap">
+<h1><strong>Klasifikasi Dengan Pengurangan Dimensi Secara Bertahap</strong><a class="headerlink" href="#klasifikasi-dengan-pengurangan-dimensi-secara-bertahap" title="Link to this heading">#</a></h1>
+<section id="installasi-library">
+<h2>Installasi Library<a class="headerlink" href="#installasi-library" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">Sastrawi</span> <span class="n">pandas</span>
 </pre></div>
@@ -450,6 +462,9 @@ Successfully installed Sastrawi-1.0.1
 </div>
 </div>
 </div>
+</section>
+<section id="load-data">
+<h2>Load Data<a class="headerlink" href="#load-data" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/hasil_crawling.csv&#39;</span>
@@ -1217,31 +1232,32 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pastikan nama kolom sesuai dengan kolom yang berisi judul dan isi berita</span>
-<span class="n">titles</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]</span>  <span class="c1"># Gantilah &#39;judul_berita&#39; dengan nama kolom judul yang sesuai</span>
-<span class="n">contents</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Content&#39;</span><span class="p">]</span>  <span class="c1"># Gantilah &#39;isi_berita&#39; dengan nama kolom isi yang sesuai</span>
-<span class="c1"># Gabungkan judul dan isi menjadi satu teks untuk setiap dokumen</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">titles</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]</span>
+<span class="n">contents</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Content&#39;</span><span class="p">]</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Content&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">titles</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">contents</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="splitting-data">
+<h2>Splitting Data<a class="headerlink" href="#splitting-data" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Split data sebelum preprocessing</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Content&#39;</span><span class="p">]</span>  <span class="c1"># Menggunakan kolom &#39;Content&#39; gabungan sebagai fitur</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">]</span>  <span class="c1"># Kolom target (label)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Content&#39;</span><span class="p">]</span> 
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">]</span> 
 
-<span class="c1"># Melakukan split data menjadi 80% training dan 20% testing</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="preprocessing">
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Preprocessing</span>
-<span class="k">def</span> <span class="nf">clean_lower</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clean_lower</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">text</span>
@@ -1278,8 +1294,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Terapkan preprocessing pada data training dan testing secara terpisah</span>
-<span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">clean_lower</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">clean_lower</span><span class="p">)</span>
 <span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">clean_punct</span><span class="p">)</span>
 <span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">_normalize_whitespace</span><span class="p">)</span>
 <span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">clean_stopwords</span><span class="p">)</span>
@@ -2054,28 +2069,21 @@ Successfully installed Sastrawi-1.0.1
   </div>
 </div></div>
 </div>
+</section>
+<section id="pembuatan-vsm">
+<h2>Pembuatan VSM<a class="headerlink" href="#pembuatan-vsm" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menggunakan TfidfVectorizer untuk menghitung TF-IDF</span>
-<span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
-
-<span class="c1"># Melakukan fit dan transform pada data training</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
 <span class="n">X_train_tfidf</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-
-<span class="c1"># Melakukan transform pada data testing (hanya transform, tidak fit)</span>
 <span class="n">X_test_tfidf</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-
-<span class="c1"># X_train_tfidf dan X_test_tfidf sekarang berisi representasi TF-IDF dari data training dan testing</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan data TF-IDF dalam bentuk DataFrame</span>
-<span class="n">tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
-
-<span class="c1"># Menampilkan beberapa baris pertama dari DataFrame</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
 <span class="n">tfidf_df</span>
 </pre></div>
 </div>
@@ -2661,10 +2669,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan data TF-IDF dalam bentuk DataFrame</span>
-<span class="n">tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_test_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
-
-<span class="c1"># Menampilkan beberapa baris pertama dari DataFrame</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_test_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
 <span class="n">tfidf_df</span>
 </pre></div>
 </div>
@@ -3466,8 +3471,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Encode label untuk Logistic Regression</span>
-<span class="n">label_encoder</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">LabelEncoder</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">label_encoder</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">LabelEncoder</span><span class="p">()</span>
 <span class="n">y_train_encoded</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span>
 <span class="n">y_test_encoded</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
 </pre></div>
@@ -3476,10 +3480,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># List untuk menyimpan hasil akurasi pada setiap jumlah dimensi</span>
-<span class="n">accuracy_results</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="c1"># Mulai dari jumlah dimensi awal, 2249</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">accuracy_results</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">current_dim</span> <span class="o">=</span> <span class="n">X_train_tfidf</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -3494,6 +3495,10 @@ Successfully installed Sastrawi-1.0.1
 </div>
 </div>
 </div>
+</section>
+<section id="penerapan-svd-secara-bertahap">
+<h2>Penerapan SVD secara bertahap<a class="headerlink" href="#penerapan-svd-secara-bertahap" title="Link to this heading">#</a></h2>
+<p>mengurangi dimensi secara bertahap dengan dikurangi sebanyak 20 sampai dengan dimensi mendekati 100 dan dilakukan klasifikasi untuk mengetahui akurasi dari tiap pengurangan dimensi yang dilakukan</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Looping untuk mengurangi jumlah dimensi sebanyak 20 pada setiap iterasi</span>
@@ -4139,6 +4144,8 @@ Accuracy with 109 components: 0.95
 <img alt="../_images/5cafa6ffc27cde4ac5d8e68c7c1d1ba699aa720c355f89a87fce89396bee628d.png" src="../_images/5cafa6ffc27cde4ac5d8e68c7c1d1ba699aa720c355f89a87fce89396bee628d.png" />
 </div>
 </div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -4170,6 +4177,15 @@ Accuracy with 109 components: 0.95
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../calssf%20dengan%20svd/vsm_dengan_reduksi.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>TUGAS 7.1 Implementasi Logistic Regression Dengan SVD</strong></p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -4185,9 +4201,14 @@ Accuracy with 109 components: 0.95
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installasi-library">Installasi Library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-data">Splitting Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuatan-vsm">Pembuatan VSM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-svd-secara-bertahap">Penerapan SVD secara bertahap</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
