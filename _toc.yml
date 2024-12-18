@@ -8,9 +8,9 @@ chapters:
   - file: tugas2/tugas2
   - file: tugas2/vsm
   - file: tugas 3/train
-  - file: tugas 4/Tugas_5(Centrality_dokumen)_
-  - file: tugas 5/Tugas_6(Summary_centrality)
-  - file: Tugas 6/Tugas_7(Keyword_Extraction)
-  - file: calssf dengan svd/klasfikasi_dengan_reduksi
-  - file: summary document/summary_document
-  - file: svd bertahap/pengurangan_svd_bertahap
+  - file: tugas 3/clasf
+  - file: tugas 4/Graph
+  - file: tugas 5/summary
+  - file: Tugas 6/Keyword_Extraction
+  - file: calssf dengan svd/vsm_dengan_reduksi
+  - file: svd bertahap/pengurangan_dimensi_bertahap
